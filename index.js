@@ -19,16 +19,14 @@ const dataImageOutEarn = [
 
 ]
 //itero la node list e il suo indice
-imageHover.forEach((image,index) => {
+imageHover.forEach((image, index) => {
     //associo un mouseover all'elemento i-esimo 
     image.addEventListener("mouseover", () => {
         //associa l'elemento dell'array alla src dell'immagine
-        image.src=dataImageEarn[index]
+        image.src = dataImageEarn[index]
     })
     image.addEventListener("mouseout", () => {
         //torna all'elemento precedente
-        image.src=dataImageOutEarn[index]
+        image.src = dataImageOutEarn[index]
     })
-
-
-    })
+})
