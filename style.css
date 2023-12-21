@@ -40,5 +40,19 @@ h2{
     /* gap: 30px; */
 }
 .card{
+    position: relative;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.image-container{
+    position: relative;
+}
+.card-image{
+    transition: opacity 0.5s ease-in-out;
+}
+-fade-out{
+    opacity: 0;
+}
+
