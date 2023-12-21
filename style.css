@@ -16,9 +16,17 @@
     margin: 48px 0px 0px;
     border-radius: 30px;
 }}
+.earn-container{
+    display: flex
+}
+.card-h2-container{
+    margin: 30px;
+}
 h2{
     color: var(--colors-secondary);
     font-size: 32px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 .earn-bunny{
     position: relative;
