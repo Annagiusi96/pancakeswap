@@ -23,10 +23,32 @@ imageHover.forEach((image, index) => {
     //associo un mouseover all'elemento i-esimo 
     image.addEventListener("mouseover", () => {
         //associa l'elemento dell'array alla src dell'immagine
+        // image.classList.add("fade-out")
         image.src = dataImageEarn[index]
+        
+        // setTimeout(() => {
+            
+        //     image.classList.remove("fade-out")
+        // }, 300);
     })
     image.addEventListener("mouseout", () => {
         //torna all'elemento precedente
         image.src = dataImageOutEarn[index]
+        
     })
 })
+
+//effetto nevicata 
+const body = document.querySelector("body")
+//funzione che crea gli elementi
+window.addEventListener("DOMContentLoaded", () => {
+    function snowEffect() {
+        const img = document.createElement("img")
+        img.src = "./assets/bk-snow-theme/flakes-1.webp"
+        img.classList.add("snow-image")
+        body.append(img)
+    }
+
+    snowEffect()
+})
+

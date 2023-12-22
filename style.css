@@ -1,4 +1,5 @@
 @import url(style-global.css);
+/* BENNI EARN */
 :root{
     color-scheme: dark;
 }
@@ -49,10 +50,15 @@ h2{
 .image-container{
     position: relative;
 }
-.card-image{
+.card-image-earn{
+    
     transition: opacity 0.5s ease-in-out;
 }
--fade-out{
+.fade-out{
     opacity: 0;
 }
+.snow-image{
+    position: absolute;
+}
 
+/* BENNI EARN FINE */
