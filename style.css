@@ -1,14 +1,14 @@
 @import url(style-global.css);
 /* BENNI EARN */
-:root{
-    color-scheme: dark;
+:root {
+  color-scheme: dark;
 }
-.discover-ecosystem{
-    display: flex;
-    justify-content: center;
+.discover-ecosystem {
+  display: flex;
+  justify-content: center;
 }
-@media screen and (min-width: 1200px){
-.earn {
+@media screen and (min-width: 1200px) {
+  .earn {
     width: 1152px;
     background: var(--colors-gradientBubblegum);
     display: flex;
@@ -16,49 +16,82 @@
     /* padding: 48px 24px 24px; */
     margin: 48px 0px 0px;
     border-radius: 30px;
-}}
-.earn-container{
-    display: flex
+  }
 }
-.card-h2-container{
-    margin: 30px;
+.earn-container {
+  display: flex;
 }
-h2{
-    color: var(--colors-secondary);
-    font-size: 32px;
-    padding-top: 20px;
-    padding-left: 20px;
+.card-h2-container {
+  margin: 30px;
 }
-.earn-bunny{
-    position: relative;
-    left: 100px;
+h2 {
+  color: var(--colors-secondary);
+  font-size: 32px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
-.card-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    gap: 30px;
+.earn-bunny {
+  position: relative;
+  left: 100px;
 }
-.card{
-    position: relative;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
 }
-.image-container{
-    position: relative;
+.card {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.card-image-earn{
-    
-    transition: opacity 0.5s ease-in-out;
+.image-container {
+  position: relative;
 }
-.fade-out{
-    opacity: 0;
+.card-image-earn {
+  transition: opacity 0.5s ease-in-out;
 }
-.snow-image{
-    position: absolute;
+.fade-out {
+  opacity: 0;
+}
+.snow-image {
+  position: absolute;
 }
 
 /* BENNI EARN FINE */
+/* full-potential BENNI INIZIO */
+.full-potential {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+}
+.full-unlock {
+  display: flex;
+  justify-content: center;
+      color: var(--colors-text);
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0px 16px;
+    text-align: center;
+    font-size: 16px;
+}
+.unlock {
+  color: var(--color-text);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 110%;
+  display: inline;
+}
+.unlock-cake{
+    color: rgb(168, 129, 252);
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    display: inline;
+}
+/* full-potential BENNI FINE */
