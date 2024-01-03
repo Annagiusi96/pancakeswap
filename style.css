@@ -1,7 +1,7 @@
 @import url(style-global.css);
 /* BENNI EARN */
-:root {
-  color-scheme: dark;
+body{
+    background-color: var(--colors-background);
 }
 .discover-ecosystem {
   display: flex;
@@ -48,6 +48,29 @@ h2 {
   flex-direction: column;
   justify-content: center;
 }
+.card-earn-p{
+        color: var(--colors-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+.earn-h3{
+        color: var(--colors-text);
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 600;
+}
+.earn-a{
+        color: var(--colors-textSubtle);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+}
+.earn-a:hover{
+    color:  var(--colors-primary);
+    transition: .25s ease-in-out;
+}
 .image-container {
   position: relative;
 }
@@ -64,6 +87,8 @@ h2 {
 /* BENNI EARN FINE */
 /* full-potential BENNI INIZIO */
 .full-potential {
+  width: 950px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -72,26 +97,86 @@ h2 {
 .full-unlock {
   display: flex;
   justify-content: center;
-      color: var(--colors-text);
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 0px 16px;
-    text-align: center;
-    font-size: 16px;
+  color: var(--colors-text);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0px 16px;
+  text-align: center;
+  font-size: 16px;
 }
 .unlock {
   color: var(--color-text);
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 110%;
   display: inline;
 }
-.unlock-cake{
-    color: rgb(168, 129, 252);
-    margin-left: 10px;
+.unlock-cake {
+  color: rgb(168, 129, 252);
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  display: inline;
+}
+.full-experience {
+  color: rgb(184, 173, 210);
+  padding: 0px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 110%;
+}
+.full-button{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+.buy-cake{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 110%;
-    display: inline;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+}
+.learn{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px 0px 0px;
+    background-color: transparent;
+    color: var(--colors-primary);
+    box-shadow: none;
+}
+.learn > i{
+    padding-left: 10px;
 }
 /* full-potential BENNI FINE */
