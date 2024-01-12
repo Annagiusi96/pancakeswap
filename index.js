@@ -33,39 +33,16 @@ imageHover.forEach((image, index) => {
     })
 })
 
-//effetto nevicata 
-const main = document.querySelector("main")
-//funzione che crea gli elementi
-window.addEventListener("DOMContentLoaded", () => {
-    function snowEffect() {
-        const img = document.createElement("img")
-        img.src = "./assets/bk-snow-theme/flakes-1.webp"
-        img.classList.add("snow-image")
-        main.append(img)
-        let a = Math.random()*(10 - 1) +1
-        let b = Math.random()*(10-1)+1
-        function random() {
-            a++
-            b++
-            console.log(a, b);
-            img.style.transform = `translate(${a}px, ${b}px)`;
-        }
-        // setInterval(random, 100);
-    }
-    snowEffect()
-})
 
-//script sezione partner (si può utilizzare anche per hero)
-//!ATTENZIONE la funzione non è ancora collegata all'html
-
+//script monetina
+const img = document.querySelector(".img-monetina")
 let n = 0
 
 function cakeToken() {
     img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
     n++
-    if (n == 201) {
+    if (n == 200) {
         clearInterval(intervalID)
     }
 }
-
 const intervalID = setInterval(cakeToken, 100)
