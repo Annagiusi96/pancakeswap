@@ -46,18 +46,18 @@ imageHover.forEach((image, index) => {
 //     }
 // }
 // const intervalID = setInterval(monetina, 100)
-const canvas = document.querySelector('.myCanvas');
-const ctx = canvas.getContext('2d');
+const canvasMonetina = document.querySelector('.myCanvas');
+const ctx = canvasMonetina.getContext('2d');
 let n = 0;
-canvas.width = 1200
-canvas.height = 1200
+canvasMonetina.width = 1200
+canvasMonetina.height = 1200
 function monetina() {
-    const img = new Image()
-    img.onload = function () {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+    const imgCanvaMonetina = new Image()
+    imgCanvaMonetina.onload = function () {
+        ctx.clearRect(0, 0, canvasMonetina.width, canvasMonetina.height)
+        ctx.drawImage(imgCanvaMonetina, 0, 0, canvasMonetina.width, canvasMonetina.height)
     }
-    img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
+    imgCanvaMonetina.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
     n++
     if (n >= 200) {
         clearInterval(intervalID)
