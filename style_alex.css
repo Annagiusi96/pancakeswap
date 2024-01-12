@@ -1,10 +1,13 @@
+/* CSS EVERYONE-FAVORITE-DEX ALEX INIZIO */
+
 @import url(style-global.css);
 
 .everyone-Favorite-DEX{
-    background-color:#201335;
+    background-color: #21193a;
     display: flex;
-    justify-content: center;
+    height: 800px;
     align-items: center;
+    justify-content: center;  
 }
 
 .everyone-title-everyone{
@@ -12,7 +15,8 @@
     margin-right: 8px;
     line-height: 110%;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 88px;
+    max-width: 600px;
     /* display: inline-block; */
 }
 
@@ -21,16 +25,18 @@
     margin-right: 8px;
     font-weight: 600;
     line-height: 110%;
-    font-size: 64px;
+    font-size: 88px;
     display: inline-block;
+    max-width: 600px;    
 }
 
 .everyone-title-dex{
     color: var(--colors-text);
     line-height: 110%;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 88px;
     display: inline-block;
+    max-width: 600px;
 }
 
 .everyone-paragraph{
@@ -65,6 +71,7 @@
     color: var(--colors-invertedContrast);
     margin-right: 8px;
     transition: all 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .everyone-buttons-connect:hover{
@@ -96,24 +103,21 @@
     border-color: var(--colors-primary);
     box-shadow: none;
     color: var(--colors-primary);
+    z-index: 1;
 }
 
 .everyone-buttons-trade:hover{
     opacity: 0.6;
 }
 
-/* video {
-    object-fit: contain;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-} */
-
 .everyone-hero{
-    display: flex;
-    justify-content: space-evenly;
+    position: fixed;
 } 
 
-/* .everyone-hero-canvas{
+.everyone-hero-canvas{
+    
+    width: 605px;
+    height: 736px;
     position: relative;
     width: 605px;
     height: 736px;
@@ -121,3 +125,74 @@
     margin-bottom: -100px;
     margin-right: -100px;
 }
+
+.everyone-hero-video1{
+    position:absolute;
+    width: 605px;
+}
+
+.everyone-hero-video2{
+    position: absolute;
+    width: 605px;   
+}
+
+.everyone-hero-video3{
+    position: absolute;
+    width: 605px;  
+}
+
+.everyone-hero-video4{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-hero-video5{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-hero-video6{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-backgorund-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 150px;
+}
+
+@media screen and (max-width: 1600px) {
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: 158px;
+    }    
+}
+
+@media screen and (max-width: 1366px) {
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: 140px;
+    }    
+}
+@media screen and (max-width: 660px) {
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: 140px;
+    }
+    
+    /* .everyone-hero-canvas{
+        height: 300px;
+        width: 300px;
+    } */
+    .everyone-hero-video1 , .everyone-hero-video2 , .everyone-hero-video3 , .everyone-hero-video4 , .everyone-hero-video5 , .everyone-hero-video6{
+        position:absolute;
+        width: 300px;
+    }
+
+}
+
+/* CSS EVERYONE-FAVORITE-DEX ALEX INIZIO */
