@@ -1,3 +1,9 @@
+/*INSERIMENTO VARI IMPORT:*/
+
+@import url(style-global.css);
+
+
+/* SEZIONE ANNAGIUSI SHAPING THE FUTURE */
 body {
     background-color: var(--colors-background);
 }
@@ -232,3 +238,201 @@ body {
 
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(129, 216, 234);
 }
+
+
+/* BENNI EARN */
+body{
+    background-color: var(--colors-background);
+}
+.discover-ecosystem {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .earn {
+    width: 1152px;
+    background: var(--colors-gradientBubblegum);
+    display: flex;
+    flex-direction: column;
+    /* padding: 48px 24px 24px; */
+    margin: 48px 0px 0px;
+    border-radius: 30px;
+  }
+}
+.earn-container {
+  display: flex;
+}
+.card-h2-container {
+  margin: 30px;
+}
+h2 {
+  color: var(--colors-secondary);
+  font-size: 32px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.earn-bunny {
+  position: relative;
+  left: 100px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+}
+.card {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-earn-p{
+        color: var(--colors-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+.earn-h3{
+        color: var(--colors-text);
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 600;
+}
+.earn-a{
+        color: var(--colors-textSubtle);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+} 
+.earn-a:hover{
+    color:  var(--colors-primary);
+    transition: .25s ease-in-out;
+}
+.image-container {
+  position: relative;
+}
+.card-image-earn {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-out {
+  opacity: 0;
+}
+.snow-image {
+  position: absolute;
+}
+
+/* BENNI EARN FINE */
+/* full-potential BENNI INIZIO */
+.full-potential {
+  width: 950px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+}
+.full-unlock {
+  display: flex;
+  justify-content: center;
+  color: var(--colors-text);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0px 16px;
+  text-align: center;
+  font-size: 16px;
+}
+.unlock {
+  color: var(--color-text);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+  display: inline;
+}
+.unlock-cake {
+  color: rgb(168, 129, 252);
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  display: inline;
+}
+.full-experience {
+  color: rgb(184, 173, 210);
+  padding: 0px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 110%;
+}
+.full-button{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+.buy-cake{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+}
+.learn{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px 0px 0px;
+    background-color: transparent;
+    color: var(--colors-primary);
+    box-shadow: none;
+}
+.learn > i{
+    padding-left: 10px;
+}
+/* full-potential BENNI FINE */
+/*earn*/
+/* canvas{
+  width: 800px;
+  height: 800px;
+  background-color: transparent;
+}
+.img-monetina{
+  z-index: 1000;
+} */
+.myCanvas{
+  border: 1px solid black;
+  width: 800px;
+  height: 800px;
+}
+
