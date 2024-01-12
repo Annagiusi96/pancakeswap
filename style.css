@@ -180,3 +180,17 @@ h2 {
     padding-left: 10px;
 }
 /* full-potential BENNI FINE */
+/*earn*/
+/* canvas{
+  width: 800px;
+  height: 800px;
+  background-color: transparent;
+}
+.img-monetina{
+  z-index: 1000;
+} */
+.myCanvas{
+  border: 1px solid black;
+  width: 800px;
+  height: 800px;
+}

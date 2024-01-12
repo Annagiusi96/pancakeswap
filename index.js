@@ -35,14 +35,35 @@ imageHover.forEach((image, index) => {
 
 
 //script monetina
-const img = document.querySelector(".img-monetina")
-let n = 0
+// const img = document.querySelector(".img-monetina")
+// let n = 0
 
-function cakeToken() {
+// function monetina() {
+//     img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
+//     n++
+//     if (n == 200) {
+//         clearInterval(intervalID)
+//     }
+// }
+// const intervalID = setInterval(monetina, 100)
+const canvas = document.querySelector('.myCanvas');
+const ctx = canvas.getContext('2d');
+let n = 0;
+canvas.width = 1200
+canvas.height = 1200
+function monetina() {
+    const img = new Image()
+    img.onload = function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+    }
     img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
     n++
-    if (n == 200) {
+    if (n >= 200) {
         clearInterval(intervalID)
     }
 }
-const intervalID = setInterval(cakeToken, 100)
+
+    const intervalID = setInterval(monetina, 100)
+
+
