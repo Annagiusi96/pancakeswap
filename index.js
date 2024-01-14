@@ -2,7 +2,7 @@
 //     // const thema = document.querySelector('html')
 //     // const btnChangeTheme = document.querySelector('button')
 //     // const homeDue = document.querySelector('.home-2')
-    
+
 //     // btnChangeTheme.addEventListener('click',()=>{
 //     //     let value = thema.getAttribute('data-theme');
 //     //     if(value === 'dark'){
@@ -16,23 +16,80 @@
 //     // })
 
 //SEZIONE SHAPING THE FUTURE ANNAGIUSI
-    const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-container');
-    const shapingElements = document.querySelectorAll('.shaping-scroll-element')
-   
-    shapingElements.forEach(e =>{
-        const cloneNode = e.cloneNode(true);
-        shapingCarosello.appendChild(cloneNode);
-    })
+const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-container');
+const shapingElements = document.querySelectorAll('.shaping-scroll-element')
 
-    function shapingScrollCarosello() {
-        if (shapingCarosello.scrollLeft >= shapingCarosello.scrollWidth / 2) {
-            shapingCarosello.scrollLeft = 0;
-        } else {
-            shapingCarosello.scrollLeft += 1;
-        }
+shapingElements.forEach(e => {
+    const cloneNode = e.cloneNode(true);
+    shapingCarosello.appendChild(cloneNode);
+})
+
+function shapingScrollCarosello() {
+    if (shapingCarosello.scrollLeft >= shapingCarosello.scrollWidth / 2) {
+        shapingCarosello.scrollLeft = 0;
+    } else {
+        shapingCarosello.scrollLeft += 1;
     }
+}
 
-    const caroselloInterval = setInterval(shapingScrollCarosello, 20);
+const caroselloInterval = setInterval(shapingScrollCarosello, 20);
+
+//SEZIONE TRADE ANNAGIUSI
+
+const imageTrade = document.querySelectorAll('.change-image-card-trade')
+const containerCardTrade = document.querySelectorAll('.single-card-trade')
+
+// console.log(imageTrade.id);
+
+// imageTrade.addEventListener('mouseover',()=>{
+//     if(imageTrade.id == "0"){
+//         imageTrade.setAttribute('src','https://assets.pancakeswap.finance/web/landing/trade-swap.png')
+//     }
+// })
+
+// imageTrade.addEventListener('mouseout',()=>{
+//     if(imageTrade.id == "0"){
+//         // imageTrade.setAttribute('src','https://assets.pancakeswap.finance/web/landing/trade-swap-purple.png')
+
+//     }
+// })
+
+const dataImageMouseOutTrade = [
+    "https://assets.pancakeswap.finance/web/landing/trade-swap-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-liquidity-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-bridge-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-perpetual-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-buy-crypto-purple.png"
+]
+
+const dataImageTrade = [
+    "https://assets.pancakeswap.finance/web/landing/trade-swap.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-liquidity.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-bridge.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-perpetual.png",
+    "https://assets.pancakeswap.finance/web/landing/trade-buy-crypto.png"
+]
+
+
+containerCardTrade.forEach((card, index) => {
+    card.addEventListener('mouseover', () => {
+        imageTrade.forEach((image, indx) => {
+            if (index == indx) {
+                image.src = dataImageTrade[indx]
+                card.addEventListener('mouseout', () => {
+                image.src = dataImageMouseOutTrade[indx]
+                })
+            }
+        })
+    })
+})
+
+
+
+
+
+
+
 
 //SEZIONE BENNI EARN
 
@@ -102,5 +159,5 @@ function monetina() {
     }
 }
 
-    const intervalID = setInterval(monetina, 100)
+const intervalID = setInterval(monetina, 100)
 
