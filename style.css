@@ -8,6 +8,10 @@ body {
     background-color: var(--colors-background);
 }
 
+a{
+    text-decoration: none;
+}
+
 .home-2-dark {
     background: linear-gradient(180deg, #09070c 22%, #201335 100%);
 
@@ -317,6 +321,121 @@ body {
     display: inline-block;
 }
 
+/* CARD TRADE */
+@media  screen and (min-width: 1200px){
+    .container-card-trade{
+        width: 1152px;
+    }
+}
+
+.container-card-trade{
+    border-radius: 24px;
+    background: var(--colors-gradientBubblegum);
+    box-sizing: border-box;
+    padding: 48px 24px 24px;
+    min-height: 360px;
+    margin-top: 48px;
+ 
+}
+
+.container-inner-card-trade{
+    gap: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-trade img{
+    color: transparent;
+    margin-left: -72px;
+    width: 340px;
+    height: 340px;
+}
+
+.options-card-trade{
+    display: flex;
+    flex-direction: column;
+}
+
+.options-card-trade h2{
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 110%;
+    color: var(--colors-secondary);
+}
+
+@media screen and (min-width: 1200px){
+    .container-inner-options-card-trade{
+        flex-wrap: nowrap;
+    }
+}
+
+.container-inner-options-card-trade{
+    gap: 24px;
+    display: flex;
+}
+
+.single-card-trade{
+    /* height: 286px; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.image-inner-card-trade{
+    transition: filter 0.25s linear 0s;
+}
+
+.image-inner-card-trade img{
+    width: 108px;
+    height: 108px;
+}
+
+.single-card-trade h3{
+    color: var(--colors-text);
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 600;
+}
+
+.single-card-trade p{
+    color: var(--colors-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.single-card-link-trade{
+    display: flex;
+}
+
+.single-card-link-trade a {
+    transition: color 0.25s ease-in-out 0s;
+    color: var(--colors-textSubtle);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.single-card-link-trade a ion-icon{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.single-card-trade:hover .single-card-link-trade a{
+    color: var(--colors-primary);
+    transition: .25s ease-in-out;
+}
+
+
+
+
 
 
 /* BENNI EARN */
@@ -343,7 +462,7 @@ body {
 .card-h2-container {
   margin: 30px;
 }
-h2 {
+.card-h2-container h2 {
   color: var(--colors-secondary);
   font-size: 32px;
   padding-top: 20px;
@@ -360,7 +479,7 @@ h2 {
   padding: 10px;
   gap: 30px;
 }
-.card {
+.card-container .card {
   position: relative;
   margin: 10px;
   display: flex;
