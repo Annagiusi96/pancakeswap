@@ -181,16 +181,28 @@ h2 {
 }
 /* full-potential BENNI FINE */
 /*earn*/
-/* canvas{
-  width: 800px;
-  height: 800px;
-  background-color: transparent;
+.full-partner {
+  display: flex;
 }
-.img-monetina{
+
+.img-monetina {
+  position: absolute;
   z-index: 1000;
-} */
-.myCanvas{
+}
+
+.full-partner-carousel {
+  position: relative;
+  width: 200px;
+  height: 800px;
+  border: 1px solid black;
+
+}
+
+.canvasMonetina {
+  position: absolute;
+  /* z-index: 1; */
   border: 1px solid black;
   width: 800px;
   height: 800px;
+  background-color: transparent;
 }
