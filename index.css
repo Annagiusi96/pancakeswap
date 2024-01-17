@@ -1,0 +1,90 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+   justify-content: space-between;
+   padding: 10px;
+    
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Allinea verticalmente al centro */
+  }
+
+  .title  {
+    margin-left: 5px; /* Aggiungi uno spazio tra il logo e il titolo */
+    font-weight: bold;
+  }
+
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0; /* Rimuove il padding predefinito della lista */
+  }
+
+  .nav-links li {
+    margin-right: 10px; /* Aggiunge uno spazio tra gli elementi <li> */
+  }
+
+  .logo2 {
+    display: flex;
+    align-items: center; /* Allinea verticalmente al centro */
+  }
+
+  .logo2 soldi {
+    margin-left: 10px; /* Aggiunge uno spazio tra il logo e l'elemento con la classe "soldi" */
+  }
+
+  
+  .container-btn {
+    align-items: center;
+    background-color: var(--colors-tertiary);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    height: 32px;
+    padding-left: 32px;
+    padding-right: 8px;
+    position: relative;
+        
+    }
+    .container-btn img{
+        left: 0px;
+    position: absolute;
+    top: 0px;
+    content: "";
+    display: block;
+    padding-top: 100%;
+    
+    }
+
+    
+
+    .button-connect{
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: #1fc7d4;
+    color:#191326;
+}
+    
