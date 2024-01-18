@@ -1,0 +1,644 @@
+/*INSERIMENTO VARI IMPORT:*/
+
+@import url(style-global.css);
+
+/* SEZIONE ANNAGIUSI SHAPING THE FUTURE */
+body {
+    background-color: var(--colors-background);
+}
+
+a{
+    text-decoration: none;
+}
+
+.home-2-dark {
+    background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+
+}
+
+.home-2-light {
+    background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+}
+
+.shaping-container-out {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 48px 0px;
+}
+
+.shaping-the-future-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: 19px;
+}
+
+.shaping-text-title {
+    color: var(--colors-text);
+    margin-bottom: 4px;
+    text-align: center;
+    line-height: 110%;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.shaping-text-subtitle {
+    color: var(--colors-text);
+    margin-bottom: 48px;
+    text-align: center;
+    line-height: 110%;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.shaping-the-future-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 50px;
+    width: 800px;
+    margin-bottom: 48px;
+}
+
+.total-users-out {
+    width: auto;
+}
+
+.total-inner {
+    color: var(--colors-text);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.total--numbers {
+    color: var(--colors-secondary);
+    line-height: 110%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.total--p {
+    color: var(--colors-textSubtle);
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.rocket-yellow {
+    height: 170px;
+    position: relative;
+    top: 74px;
+    left: 23px;
+    width: 151px;
+}
+
+#rocket-purple-img {
+    width: 113px;
+}
+
+.rocket-blur {
+    width: 89px;
+    position: relative;
+    top: -146px;
+
+}
+
+.shaping-text-and-image {
+    display: flex;
+    justify-content: space-between;
+    width: 98vw;
+}
+
+.shaping-infinite-scrolling-container {
+    position: relative;
+    width: 98vw;
+    height: 4rem;
+    overflow-x: hidden;
+    max-width: 1063px;
+    mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.shaping-scroll-element {
+    padding: 12px 24px;
+    height: 46px;
+    border-radius: 25px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+
+    /* width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    animation: primary 8s linear infinite; */
+}
+
+/* .animation{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    animation: primary 8s linear infinite;
+} */
+
+/* @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
+  } */
+
+.shaping-scroll-element p {
+    line-height: 1.5;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.colorInverted {
+    color: var(--colors-invertedContrast);
+}
+
+#scroll-element-1-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(240, 185, 11);
+}
+
+#scroll-element-1-background path,
+#scroll-element-3-background path,
+#scroll-element-5-background path,
+#scroll-element-6-background path,
+#scroll-element-9-background path {
+    fill: var(--colors-invertedContrast);
+}
+
+#scroll-element-2-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(51, 51, 51);
+
+}
+
+#scroll-element-2-background p {
+    color: rgb(240, 185, 11);
+
+}
+
+#scroll-element-2-background path {
+    fill: rgb(240, 185, 11);
+}
+
+.svg-element-1-2 {
+    width: 26px;
+}
+
+#scroll-element-3-background {
+    background: rgb(23, 186, 146);
+}
+
+#scroll-element-4-background {
+    background: rgb(98, 122, 216);
+}
+
+#scroll-element-4-background img {
+    width: 30px;
+    opacity: 0.5;
+}
+
+#scroll-element-5-background {
+    background: rgb(173, 115, 222);
+}
+
+#scroll-element-6-background {
+    background: rgb(104, 110, 167);
+}
+
+#scroll-element-7-background {
+    background: rgb(110, 137, 174);
+    
+}
+
+#scroll-element-9-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(117, 161, 255);
+}
+
+#scroll-element-8-background {
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(129, 216, 234);
+}
+
+/* DISCOVER ECO SYSTEM */
+.onda-top-discover{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 0px;
+}
+
+.container-section-trade-earn-game{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    padding: 48px 0px;
+}
+.container-all-cards-inner{
+    margin: 0px;
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.container-onda-top-and-cards{
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+}
+.onda-top-discover svg{
+    fill: var(--colors-background);
+    width: 100%;
+    height: 100%;
+    max-height: 48px;
+}
+
+.onda-top-discover path{
+    fill: #201335;
+}
+
+.container-image-and-text-discover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discover-ecosystem-title{
+    margin-top: 20px;
+}
+
+.discover-ecosystem-title p{
+    display: flex;
+    justify-content: center;
+    color: var(--colors-text);
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.discover-ecosystem-title p span{
+    color: var(--colors-secondary);
+    font-weight: 600;
+    margin-left: 8px;
+    line-height: 110%;
+    display: inline-block;
+    font-size: 40px;
+}
+
+#title-discover-the{
+    color: var(--colors-text);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    display: inline-block;
+}
+
+/* CARD TRADE */
+@media  screen and (min-width: 1200px){
+    .container-card-trade{
+        width: 1152px;
+    }
+}
+
+.container-card-trade{
+    border-radius: 24px;
+    background: var(--colors-gradientBubblegum);
+    box-sizing: border-box;
+    padding: 48px 24px 24px;
+    min-height: 360px;
+    margin-top: 48px;
+ 
+}
+
+.container-inner-card-trade{
+    gap: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-trade img{
+    color: transparent;
+    margin-left: -72px;
+    width: 340px;
+    height: 340px;
+}
+
+.options-card-trade{
+    display: flex;
+    flex-direction: column;
+}
+
+.options-card-trade h2{
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 110%;
+    color: var(--colors-secondary);
+}
+
+@media screen and (min-width: 1200px){
+    .container-inner-options-card-trade{
+        flex-wrap: nowrap;
+    }
+}
+
+.container-inner-options-card-trade{
+    gap: 24px;
+    display: flex;
+}
+
+.single-card-trade{
+    /* height: 286px; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px;
+}
+
+.image-inner-card-trade{
+    transition: filter 0.25s linear 0s;
+}
+
+.image-inner-card-trade img{
+    width: 108px;
+    height: 108px;
+}
+
+.single-card-trade h3{
+    color: var(--colors-text);
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 600;
+}
+
+.single-card-trade p{
+    color: var(--colors-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.single-card-link-trade{
+    display: flex;
+}
+
+.single-card-link-trade a {
+    transition: color 0.25s ease-in-out 0s;
+    color: var(--colors-textSubtle);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.single-card-link-trade a ion-icon{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.single-card-trade:hover .single-card-link-trade a{
+    color: var(--colors-primary);
+    transition: .25s ease-in-out;
+}
+
+
+
+
+
+
+/* BENNI EARN */
+
+.discover-ecosystem-cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .earn {
+    width: 1152px;
+    background: var(--colors-gradientBubblegum);
+    display: flex;
+    flex-direction: column;
+    /* padding: 48px 24px 24px; */
+    margin: 48px 0px 0px;
+    border-radius: 30px;
+  }
+}
+.earn-container {
+  display: flex;
+}
+.card-h2-container {
+  margin: 30px;
+}
+.card-h2-container h2 {
+  color: var(--colors-secondary);
+  font-size: 32px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.earn-bunny {
+  position: relative;
+  left: 100px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+}
+.card-container .card {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-earn-p{
+        color: var(--colors-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+}
+.earn-h3{
+        color: var(--colors-text);
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 110%;
+    font-weight: 600;
+}
+.earn-a{
+        color: var(--colors-textSubtle);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 600;
+} 
+.earn-a:hover{
+    color:  var(--colors-primary);
+    transition: .25s ease-in-out;
+}
+.image-container {
+  position: relative;
+}
+.card-image-earn {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-out {
+  opacity: 0;
+}
+.snow-image {
+  position: absolute;
+}
+
+/* BENNI EARN FINE */
+/* full-potential BENNI INIZIO */
+.full-potential {
+  width: 950px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+}
+.full-unlock {
+  display: flex;
+  justify-content: center;
+  color: var(--colors-text);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0px 16px;
+  text-align: center;
+  font-size: 16px;
+}
+.unlock {
+  color: var(--color-text);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110%;
+  display: inline;
+}
+.unlock-cake {
+  color: rgb(168, 129, 252);
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  display: inline;
+}
+.full-experience {
+  color: rgb(184, 173, 210);
+  padding: 0px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 110%;
+}
+.full-button{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+.buy-cake{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+}
+.learn{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px 0px 0px;
+    background-color: transparent;
+    color: var(--colors-primary);
+    box-shadow: none;
+}
+.learn > i{
+    padding-left: 10px;
+}
+/* full-potential BENNI FINE */
+/*earn*/
+.full-partner {
+    display: flex;
+    justify-content: space-around;
+}
+.img-monetina{
+    position: absolute;
+    z-index: 1000;
+}
+.full-partner-carousel {
+    width: 200px;
+    height: 600px;
+    border: 1px solid black;
+    background-color: aqua;
+
+}
+.canvasMonetina{
+    position: absolute;
+    /* z-index: 1; */
+  border: 1px solid black;
+  width: 800px;
+  height: 800px;
+  background-color: transparent;
+}
+
