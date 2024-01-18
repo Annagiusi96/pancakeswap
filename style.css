@@ -2,7 +2,6 @@
 
 @import url(style-global.css);
 
-
 /* SEZIONE ANNAGIUSI SHAPING THE FUTURE */
 body {
     background-color: var(--colors-background);
@@ -619,17 +618,25 @@ a{
 }
 /* full-potential BENNI FINE */
 /*earn*/
-/* canvas{
-  width: 800px;
-  height: 800px;
-  background-color: transparent;
+.full-partner {
+    display: flex;
 }
 .img-monetina{
-  z-index: 1000;
-} */
-.myCanvas{
+    position: absolute;
+    z-index: 1000;
+}
+.full-partner-carousel {
+    width: 200px;
+    height: 600px;
+    border: 1px solid black;
+
+}
+.canvasMonetina{
+    position: absolute;
+    /* z-index: 1; */
   border: 1px solid black;
   width: 800px;
   height: 800px;
+  background-color: transparent;
 }
 

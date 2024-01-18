@@ -32,7 +32,7 @@ function shapingScrollCarosello() {
     }
 }
 
-const caroselloInterval = setInterval(shapingScrollCarosello, 20);
+const caroselloInterval = setInterval(shapingScrollCarosello, 200);
 
 //SEZIONE TRADE ANNAGIUSI
 
@@ -130,34 +130,59 @@ imageHover.forEach((image, index) => {
 
 //SEZIONE BENNI MONETINA
 //script monetina
-// const img = document.querySelector(".img-monetina")
-// let n = 0
+const img = document.querySelector(".img-monetina")
+let n = 0
 
-// function monetina() {
-//     img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
-//     n++
-//     if (n == 200) {
-//         clearInterval(intervalID)
-//     }
-// }
-// const intervalID = setInterval(monetina, 100)
-const canvasMonetina = document.querySelector('.myCanvas');
-const ctx = canvasMonetina.getContext('2d');
-let n = 0;
-canvasMonetina.width = 1200
-canvasMonetina.height = 1200
 function monetina() {
-    const imgCanvaMonetina = new Image()
-    imgCanvaMonetina.onload = function () {
-        ctx.clearRect(0, 0, canvasMonetina.width, canvasMonetina.height)
-        ctx.drawImage(imgCanvaMonetina, 0, 0, canvasMonetina.width, canvasMonetina.height)
-    }
-    imgCanvaMonetina.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
+    img.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
     n++
-    if (n >= 200) {
+    if (n == 200) {
         clearInterval(intervalID)
     }
 }
-
 const intervalID = setInterval(monetina, 100)
+
+const canvasMonetina = document.querySelector('.canvasMonetina');
+const ctx = canvasMonetina.getContext('2d');
+
+canvasMonetina.width = 1200
+canvasMonetina.height = 1200
+const startX = 400;
+const startY = 400
+const endX = 150
+const endY= 400 
+ctx.strokeStyle = '#ff0000'; // Rosso
+ctx.lineWidth = 2; // Spessore della linea
+ctx.zIndex=1000
+
+// Inizia il percorso della linea
+ctx.beginPath();
+
+// Muovi il "pennello" al punto di inizio della linea
+ctx.moveTo(startX, startY);
+
+// Disegna una linea fino al punto di fine
+ctx.lineTo(endX, endY);
+
+// Traccia la linea utilizzando gli stili impostati
+ctx.stroke();
+
+// Chiudi il percorso
+ctx.closePath();
+// function monetina() {
+//     const imgCanvaMonetina = new Image()
+//     imgCanvaMonetina.onload = function () {
+//         ctx.clearRect(0, 0, canvasMonetina.width, canvasMonetina.height)
+//         ctx.drawImage(imgCanvaMonetina, 0, 0, canvasMonetina.width, canvasMonetina.height)
+//     }
+//     imgCanvaMonetina.src = `https://assets.pancakeswap.finance/web/landing/cake-token-sequence/${n}.png`
+//     n++
+//     if (n >= 200) {
+//         clearInterval(intervalID)
+//     }
+// }
+
+    
+
+// const intervalID = setInterval(monetina, 100)
 
