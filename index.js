@@ -141,7 +141,22 @@ function monetina() {
         clearInterval(intervalID)
     }
 }
-const intervalID = setInterval(monetina, 100)
+// const intervalID = setInterval(monetina, 100)
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Avvia l'animazione solo se l'elemento è visibile nella viewport
+            intervalID = setInterval(monetina, 100);
+            observer.unobserve(img);  // Non osservare più l'elemento dopo l'avvio dell'animazione
+        }
+    });
+}
+
+// Crea l'Observer
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+// Osserva l'elemento desiderato
+observer.observe(img);
 
 const canvasMonetina = document.querySelector('.canvasMonetina');
 const ctx = canvasMonetina.getContext('2d');
