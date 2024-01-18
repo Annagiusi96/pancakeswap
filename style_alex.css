@@ -6,6 +6,7 @@
     background-color: #21193a;
     display: flex;
     height: 800px;
+    width: 100%;
     align-items: center;
     justify-content: center;  
 }
@@ -17,7 +18,6 @@
     font-weight: 600;
     font-size: 88px;
     max-width: 600px;
-    /* display: inline-block; */
 }
 
 .everyone-title-favorite{
@@ -119,8 +119,6 @@
     width: 605px;
     height: 736px;
     position: relative;
-    width: 605px;
-    height: 736px;
     overflow: hidden;
     margin-bottom: -100px;
     margin-right: -100px;
@@ -160,6 +158,7 @@
     position: absolute;
     width: 100%;
     bottom: 150px;
+    
 }
 
 @media screen and (max-width: 1600px) {
@@ -174,25 +173,89 @@
     .everyone-backgorund-bottom{
         position: absolute;
         width: 100%;
-        bottom: 140px;
+        bottom: 143px;
     }    
 }
 @media screen and (max-width: 660px) {
+    
+    .everyone-Favorite-DEX{
+        background-color: #21193a;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 100%;
+        
+        
+    }
+
+    
+    .everyone-title{
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .everyone-title-favorite{
+        font-size: 32px; 
+    
+    }
+
+    .everyone-title-everyone{
+        font-size: 32px;
+    
+    }
+
+    .everyone-title-dex{
+        font-size: 32px;
+        
+        
+        
+    }
+    
     .everyone-backgorund-bottom{
         position: absolute;
         width: 100%;
-        bottom: 140px;
+        bottom: 157px;
+    }
+
+    .sc-grXZZQ{
+        display: block;
+    }
+
+    .everyone-paragraph{
+        color: rgb(184, 173, 210);
+        margin-bottom: 24px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 110%;
+        font-weight: 600;
+        max-width: 600px;
+        padding: 16px;
     }
     
-    /* .everyone-hero-canvas{
-        height: 300px;
-        width: 300px;
-    } */
+    .everyone-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .everyone-hero-canvas{
+        width: 375px;
+        height: 375px;
+        margin-bottom: 0;
+        margin-right: 0;
+        
+    }
+
     .everyone-hero-video1 , .everyone-hero-video2 , .everyone-hero-video3 , .everyone-hero-video4 , .everyone-hero-video5 , .everyone-hero-video6{
         position:absolute;
-        width: 300px;
+        width: 375px;
+        
     }
 
 }
 
-/* CSS EVERYONE-FAVORITE-DEX ALEX INIZIO */
+/* CSS EVERYONE-FAVORITE-DEX ALEX FINE */
