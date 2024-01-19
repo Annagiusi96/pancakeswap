@@ -143,19 +143,19 @@ function monetina() {
 }
 // document.addEventListener("scroll",()=>monetina())
 const intervalID = setInterval(monetina, 100)
-function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Avvia l'animazione solo se l'elemento è visibile nella viewport
-            intervalID = setInterval(monetina, 100);
-            observer.unobserve(img);  
-        }
-    });
-}
+// function handleIntersection(entries, observer) {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             // Avvia l'animazione solo se l'elemento è visibile nella viewport
+//             intervalID = setInterval(monetina, 100);
+//             observer.unobserve(img);  
+//         }
+//     });
+// }
 
-const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+// const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
-observer.observe(img);
+// observer.observe(img);
 
 const canvasMonetina = document.querySelector('.canvasMonetina');
 const ctx = canvasMonetina.getContext('2d');
@@ -172,6 +172,7 @@ ctx.strokeStyle = 'white';
 ctx.lineWidth = 2; 
 ctx.zIndex=1000
 let currentX = startX
+let spia = false
 //metodi di costruzione delle linee sul canvas
 function sxLineDraw() {
     currentX-=2
@@ -182,6 +183,8 @@ function sxLineDraw() {
     ctx.closePath();
     if (currentX==(startX-endX)) {
         clearInterval(intervalIDlineSxOrizontal)
+        spia = true
+        console.log(spia);
     }
 }
 const intervalIDlineSxOrizontal = setInterval(()=>{sxLineDraw()},10)
@@ -227,31 +230,31 @@ let currentLeftIdSU =startSottoSxY
 //metodi di costruzione delle linee sul canvas
 function verticalLineDrawLeft() {
      currentLeftIdSU -= 2
-     
     ctx.beginPath();
     ctx.moveTo(startSottoSxX, startSottoSxY);
     ctx.lineTo(endSottoSxX, currentLeftIdSU);
     ctx.stroke();
     ctx.closePath();
-    if (currentLeftIdSU===startSottoSxX) {
+    if (currentLeftIdSU === startSottoSxX) {
         clearInterval(idIntervallSuLeft)
     }
 }
 function verticalLineDrawLeftSu() {
-     currentLeftIdgiu += 2
-     console.log(currentLeftIdgiu);
-    ctx.beginPath();
-    ctx.moveTo(startSottoSxX, startSottoSxY);
-    ctx.lineTo(endSottoSxX, currentLeftIdgiu);
-    ctx.stroke();
-    ctx.closePath();
-    if (currentLeftIdgiu===700) {
+         currentLeftIdgiu += 2
+         console.log(currentLeftIdgiu);
+         ctx.beginPath();
+         ctx.moveTo(startSottoSxX, startSottoSxY);
+         ctx.lineTo(endSottoSxX, currentLeftIdgiu);
+         ctx.stroke();
+         ctx.closePath();
+    if (currentLeftIdgiu === 700) {
         clearInterval(idIntervallGiuLeft)
-    }
+        }
 }
+const idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
+const idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
 
-    const idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)    
-    const idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
+    
 
 //linea verticale  sinistra
 const startSottoDxX = 650
@@ -322,3 +325,48 @@ const intervalIDDownRight=  setInterval(() => verticalLineDrawrightGiu(), 10);
 
 // const intervalID = setInterval(monetina, 100)
 
+// Get the canvas element and 2D context
+// var canvas = document.getElementById("myCanvas");
+// var ctx = canvas.getContext("2d");
+
+// // Set initial line lengths
+// var horizontalLineLength = 0;
+// var verticalLineLength = 0;
+
+// // Set animation parameters
+// var animationSpeed = 2; // Adjust this value to control the animation speed
+
+// function animateLines() {
+//     // Clear the canvas
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//     // Draw the horizontal line
+//     ctx.beginPath();
+//     ctx.moveTo(0, canvas.height / 2);
+//     ctx.lineTo(horizontalLineLength, canvas.height / 2);
+//     ctx.stroke();
+
+//     // Increase the horizontal line length
+//     horizontalLineLength += animationSpeed;
+
+//     // Check if the horizontal line has finished growing
+//     if (horizontalLineLength < canvas.width) {
+//         // Continue the animation
+//         requestAnimationFrame(animateLines);
+//     } else {
+//         // Draw the vertical line when the horizontal line is done
+//         ctx.beginPath();
+//         ctx.moveTo(canvas.width / 2, canvas.height / 2);
+//         ctx.lineTo(canvas.width / 2, verticalLineLength);
+//         ctx.stroke();
+
+//         // Increase the vertical line length
+//         verticalLineLength += animationSpeed;
+
+//         // Continue the animation for the vertical line
+//         requestAnimationFrame(animateLines);
+//     }
+// }
+
+// // Start the animation
+// animateLines();
