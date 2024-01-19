@@ -9,6 +9,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;  
+    position: relative;
 }
 
 .everyone-title-everyone{
@@ -157,7 +158,7 @@
 .everyone-backgorund-bottom{
     position: absolute;
     width: 100%;
-    bottom: 150px;
+    bottom: -10px;
     
 }
 
@@ -165,7 +166,7 @@
     .everyone-backgorund-bottom{
         position: absolute;
         width: 100%;
-        bottom: 158px;
+        bottom: -10;
     }    
 }
 
@@ -173,7 +174,7 @@
     .everyone-backgorund-bottom{
         position: absolute;
         width: 100%;
-        bottom: 143px;
+        bottom: -10;
     }    
 }
 @media screen and (max-width: 660px) {
@@ -186,6 +187,7 @@
         align-items: center;
         height: 800px;
         width: 100%;
+        position: relative;
         
         
     }
@@ -219,7 +221,7 @@
     .everyone-backgorund-bottom{
         position: absolute;
         width: 100%;
-        bottom: 157px;
+        bottom: -10px;
     }
 
     .sc-grXZZQ{

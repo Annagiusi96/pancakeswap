@@ -32,7 +32,7 @@ function shapingScrollCarosello() {
     }
 }
 
-const caroselloInterval = setInterval(shapingScrollCarosello, 200);
+const caroselloInterval = setInterval(shapingScrollCarosello, 20);
 
 //SEZIONE TRADE ANNAGIUSI
 
@@ -140,7 +140,7 @@ function monetina() {
         clearInterval(intervalID)
     }
 }
-const intervalID = setInterval(monetina, 100)
+const intervalID = setInterval(monetina, 20)
 
 const canvasMonetina = document.querySelector('.canvasMonetina');
 const ctx = canvasMonetina.getContext('2d');
