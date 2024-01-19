@@ -39,21 +39,6 @@ const caroselloInterval = setInterval(shapingScrollCarosello, 20);
 const imageTrade = document.querySelectorAll('.change-image-card-trade')
 const containerCardTrade = document.querySelectorAll('.single-card-trade')
 
-// console.log(imageTrade.id);
-
-// imageTrade.addEventListener('mouseover',()=>{
-//     if(imageTrade.id == "0"){
-//         imageTrade.setAttribute('src','https://assets.pancakeswap.finance/web/landing/trade-swap.png')
-//     }
-// })
-
-// imageTrade.addEventListener('mouseout',()=>{
-//     if(imageTrade.id == "0"){
-//         // imageTrade.setAttribute('src','https://assets.pancakeswap.finance/web/landing/trade-swap-purple.png')
-
-//     }
-// })
-
 const dataImageMouseOutTrade = [
     "https://assets.pancakeswap.finance/web/landing/trade-swap-purple.png",
     "https://assets.pancakeswap.finance/web/landing/trade-liquidity-purple.png",
