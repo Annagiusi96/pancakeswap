@@ -1,3 +1,5 @@
+@import url(style-global.css);
+
 .join-svg-onda-background {
     /* position: absolute; */
     display: flex;
@@ -12,6 +14,15 @@
     max-height: 48px;
 }
 
+.path-onda-join-light{
+    fill: #72b8f2;
+}
+
+.path-onda-join-dark{
+    fill: #0b4576;
+
+}
+
 .home-3 {
     position: relative;
     flex-direction: column;
@@ -19,6 +30,8 @@
     z-index: 1;
     padding: 48px 0px;
     display: flex;
+    background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+
 }
 
 .home-3-backg-dark{
@@ -90,6 +103,8 @@
     border: 1px solid var(--colors-cardBorder);
     backdrop-filter: blur(20px);
     border-radius: 72px;
+    background: rgba(0, 0, 0, 0.8);
+
 }
 
 .join-container-central-backg-light{
@@ -99,6 +114,7 @@
 .join-container-central-backg-dark{
     background: rgba(0, 0, 0, 0.8);
 }
+
 
 @media screen and (min-width: 852px) {
     .join-container-central-inner {
