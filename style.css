@@ -17,7 +17,7 @@ a{
 }
 
 .home-2-light {
-    background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+    background: linear-gradient(180deg,#fff 22%,#d8cbed 100%);  
 }
 
 .shaping-container-out {
@@ -279,8 +279,12 @@ a{
     max-height: 48px;
 }
 
-.onda-top-discover path{
+.color-onda-top-discover-light{
+    fill: #d8cbed;
+}
+.color-onda-top-discover-dark{
     fill: #201335;
+
 }
 
 .container-image-and-text-discover{
