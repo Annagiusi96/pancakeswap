@@ -20,6 +20,7 @@ const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-con
 const shapingElements = document.querySelectorAll('.shaping-scroll-element')
 
 shapingElements.forEach(e => {
+    console.log(e)
     const cloneNode = e.cloneNode(true);
     shapingCarosello.appendChild(cloneNode);
 })
@@ -281,5 +282,3 @@ function verticalLineDrawrightGiu() {
         clearInterval(intervalIDDownRight)
     }
 }
-
-
