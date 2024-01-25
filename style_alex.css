@@ -1,0 +1,263 @@
+/* CSS EVERYONE-FAVORITE-DEX ALEX INIZIO */
+
+@import url(style-global.css);
+
+.everyone-Favorite-DEX{
+    background-color: #21193a;
+    display: flex;
+    height: 800px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;  
+    position: relative;
+}
+
+.everyone-title-everyone{
+    color: var(--colors-text);
+    margin-right: 8px;
+    line-height: 110%;
+    font-weight: 600;
+    font-size: 88px;
+    max-width: 600px;
+}
+
+.everyone-title-favorite{
+    color: var(--colors-secondary);
+    margin-right: 8px;
+    font-weight: 600;
+    line-height: 110%;
+    font-size: 88px;
+    display: inline-block;
+    max-width: 600px;    
+}
+
+.everyone-title-dex{
+    color: var(--colors-text);
+    line-height: 110%;
+    font-weight: 600;
+    font-size: 88px;
+    display: inline-block;
+    max-width: 600px;
+}
+
+.everyone-paragraph{
+    color: rgb(184, 173, 210);
+    margin-bottom: 24px;
+    font-size: 24px;
+    text-align: left;
+    line-height: 110%;
+    font-weight: 600;
+    max-width: 600px;
+}
+
+.everyone-buttons-connect{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px 0px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+    margin-right: 8px;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.everyone-buttons-connect:hover{
+    opacity: 0.9;
+    background-color: var(--colors-primaryDark);
+}
+
+.everyone-buttons-trade{
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: all 0.2s ease-in-out;
+    height: 48px;
+    padding: 0px 24px;
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--colors-primary);
+    box-shadow: none;
+    color: var(--colors-primary);
+    z-index: 1;
+}
+
+.everyone-buttons-trade:hover{
+    opacity: 0.6;
+}
+
+.everyone-hero{
+    position: fixed;
+} 
+
+.everyone-hero-canvas{
+    
+    width: 605px;
+    height: 736px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -100px;
+    margin-right: -100px;
+}
+
+.everyone-hero-video1{
+    position:absolute;
+    width: 605px;
+}
+
+.everyone-hero-video2{
+    position: absolute;
+    width: 605px;   
+}
+
+.everyone-hero-video3{
+    position: absolute;
+    width: 605px;  
+}
+
+.everyone-hero-video4{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-hero-video5{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-hero-video6{
+    position: absolute;
+    width: 605px;
+}
+
+.everyone-backgorund-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    
+}
+
+@media screen and (max-width: 1600px) {
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: -10;
+    }    
+}
+
+@media screen and (max-width: 1366px) {
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: -10;
+    }    
+}
+@media screen and (max-width: 660px) {
+    
+    .everyone-Favorite-DEX{
+        background-color: #21193a;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 100%;
+        position: relative;
+        
+        
+    }
+
+    
+    .everyone-title{
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .everyone-title-favorite{
+        font-size: 32px; 
+    
+    }
+
+    .everyone-title-everyone{
+        font-size: 32px;
+    
+    }
+
+    .everyone-title-dex{
+        font-size: 32px;
+        
+        
+        
+    }
+    
+    .everyone-backgorund-bottom{
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+    }
+
+    .sc-grXZZQ{
+        display: block;
+    }
+
+    .everyone-paragraph{
+        color: rgb(184, 173, 210);
+        margin-bottom: 24px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 110%;
+        font-weight: 600;
+        max-width: 600px;
+        padding: 16px;
+    }
+    
+    .everyone-buttons{
+        display: flex;
+        justify-content: center;
+    }
+
+    .everyone-hero-canvas{
+        width: 375px;
+        height: 375px;
+        margin-bottom: 0;
+        margin-right: 0;
+        
+    }
+
+    .everyone-hero-video1 , .everyone-hero-video2 , .everyone-hero-video3 , .everyone-hero-video4 , .everyone-hero-video5 , .everyone-hero-video6{
+        position:absolute;
+        width: 375px;
+        
+    }
+
+}
+
+/* CSS EVERYONE-FAVORITE-DEX ALEX FINE */
