@@ -63,7 +63,7 @@ containerCardTrade.forEach((card, index) => {
             if (index == indx) {
                 image.src = dataImageTrade[indx]
                 card.addEventListener('mouseout', () => {
-                image.src = dataImageMouseOutTrade[indx]
+                    image.src = dataImageMouseOutTrade[indx]
                 })
             }
         })
@@ -282,3 +282,38 @@ function verticalLineDrawrightGiu() {
         clearInterval(intervalIDDownRight)
     }
 }
+
+const shapingCarosello1 = document.querySelector('.shaping-infinite-scrolling-container1');
+const shapingElements1 = document.querySelectorAll('.shaping-scroll-element1')
+
+shapingElements1.forEach(e => {
+    console.log(e)
+    const cloneNode = e.cloneNode(true);
+    shapingCarosello1.appendChild(cloneNode);
+})
+
+function shapingScrollCarosello1() {
+    if (shapingCarosello1.scrollTop >= shapingCarosello1.scrollHeight / 2) {
+        shapingCarosello1.scrollTop = 0;
+    } else {
+        shapingCarosello1.scrollTop += 1;
+    }
+}
+setInterval(shapingScrollCarosello1, 20);
+const shapingCarosello2 = document.querySelector('.shaping-infinite-scrolling-container2');
+const shapingElements2 = document.querySelectorAll('.shaping-scroll-element2')
+
+shapingElements2.forEach(e => {
+    console.log(e)
+    const cloneNode = e.cloneNode(true);
+    shapingCarosello2.appendChild(cloneNode);
+})
+
+function shapingScrollCarosello2() {
+    if (shapingCarosello2.scrollTop >= shapingCarosello2.scrollHeight / 2) {
+        shapingCarosello2.scrollTop = 0;
+    } else {
+        shapingCarosello2.scrollTop += 1;
+    }
+}
+setInterval(shapingScrollCarosello2, 20);
