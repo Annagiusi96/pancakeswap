@@ -299,7 +299,7 @@ function shapingScrollCarosello1() {
         shapingCarosello1.scrollTop += 1;
     }
 }
-setInterval(shapingScrollCarosello1, 20);
+const carosellointervall1 = setInterval(shapingScrollCarosello1, 20);
 const shapingCarosello2 = document.querySelector('.shaping-infinite-scrolling-container2');
 const shapingElements2 = document.querySelectorAll('.shaping-scroll-element2')
 
@@ -310,10 +310,11 @@ shapingElements2.forEach(e => {
 })
 
 function shapingScrollCarosello2() {
+    console.log("Resetting scrollTop to 0");
     if (shapingCarosello2.scrollTop >= shapingCarosello2.scrollHeight / 2) {
         shapingCarosello2.scrollTop = 0;
     } else {
         shapingCarosello2.scrollTop += 1;
     }
 }
-setInterval(shapingScrollCarosello2, 20);
+setInterval(shapingScrollCarosello2,30)
