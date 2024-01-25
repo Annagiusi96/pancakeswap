@@ -254,7 +254,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
     ctx.strokeStyle = 'White'; // Rosso
     ctx.lineWidth = 2; // Spessore della linea
     ctx.zIndex = 1000
-    let currentIdVerticalRightUp = startSottoDxY
+        let currentIdVerticalRightUp = startSottoDxY
     //metodi di costruzione delle linee sul canvas
     function verticalLineDrawrightSu() {
         currentIdVerticalRightUp += 5
@@ -324,3 +324,48 @@ function shapingScrollCarosello2() {
     }
 }
 setInterval(shapingScrollCarosello2,30)
+//GAME & NFT RAPISARDI
+const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
+const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')
+
+const dataImageMouseOutGameNft = [
+    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/game-prediction-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/nft-marketplace-purple.png"
+    
+]
+
+const dataImageGameNft = [
+    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors.png",
+    "https://assets.pancakeswap.finance/web/landing/game-prediction.png",
+    "https://assets.pancakeswap.finance/web/landing/nft-marketplace.png"
+
+]
+
+
+containerCardGameNft.forEach((card, index) => {
+    card.addEventListener('mouseover', () => {
+        imageGameNft.forEach((image, indx) => {
+            if (index == indx) {
+                image.src = dataImageGameNft[indx]
+                card.addEventListener('mouseout', () => {
+                image.src = dataImageMouseOutGameNft[indx]
+                })
+            }
+        })
+    })
+})
+
+//Footer Language
+const btnLanguage = document.querySelector('.footerLanguageEN');
+const listLang= document.querySelector('.footerAllLanguage');
+
+btnLanguage.addEventListener('mouseover', ()=>{
+    listLang.style.opacity= 1 ;
+})
+
+btnLanguage.addEventListener('mouseout', ()=>{
+    // listLang.style.opacity= 0;
+    setInterval(()=> {listLang.style.opacity= 0; }, 5000);
+},);
+    
