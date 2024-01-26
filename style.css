@@ -264,7 +264,7 @@
     color: var(--colors-secondary);
   }
 
-  h2 {
+  .title-h2 h2 {
       text-align: center;
       padding: 5px;
       line-height: 1.5;

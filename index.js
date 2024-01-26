@@ -315,6 +315,43 @@ containerCardGameNft.forEach((card, index) => {
     })
 })
 
+
+
+//SEZIONE UNDEFINED 
+const containerSlideSwiper = document.querySelectorAll('.swiper-slide-join');
+let currentIndexSlide = 0;
+const btnSwiperPrev = document.querySelector('#button-1-swiper');
+const btnSwiperNext = document.querySelector('#button-2-swiper');
+const btnSwiperPrev2 = document.querySelector('#btn-prev-swiper')
+
+function showSwiperSlide(index) {
+    containerSlideSwiper.forEach(slide => {
+      slide.style.display = 'none';
+    });
+  
+    containerSlideSwiper[index].style.display = 'block';
+  }
+
+  function nextSwiperSlide() {
+    currentIndexSlide = (currentIndexSlide + 1) % containerSlideSwiper.length;
+    showSwiperSlide(currentIndexSlide);
+  }
+
+  function previousSlide() {
+    currentIndexSlide = (currentIndexSlide - 1 + containerSlideSwiper.length) % containerSlideSwiper.length;
+    showSwiperSlide(currentIndexSlide);
+  }
+  
+  showSwiperSlide(currentIndexSlide);
+
+  btnSwiperNext.addEventListener('click',nextSwiperSlide)
+  btnSwiperPrev2.addEventListener('click',previousSlide)
+
+
+
+
+
+
 //Footer Language
 const btnLanguage = document.querySelector('.footerLanguageEN');
 const listLang= document.querySelector('.footerAllLanguage');
