@@ -1,19 +1,3 @@
-// TASTO DARK MODE DA IMPLEMENTARE
-//     // const thema = document.querySelector('html')
-//     // const btnChangeTheme = document.querySelector('button')
-//     // const homeDue = document.querySelector('.home-2')
-
-//     // btnChangeTheme.addEventListener('click',()=>{
-//     //     let value = thema.getAttribute('data-theme');
-//     //     if(value === 'dark'){
-//     //         thema.setAttribute('data-theme','light')
-//     //         homeDue.classList.Add('home-2-dark')
-//     //     }
-//     //     if(value == 'light'){
-//     //         thema.setAttribute('data-theme','dark')
-//     //         homeDue.classList.Add('home-2-light')
-//     //     }
-//     // })
 
 //SEZIONE SHAPING THE FUTURE ANNAGIUSI
 const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-container');
@@ -34,6 +18,26 @@ function shapingScrollCarosello() {
 }
 
 const caroselloInterval = setInterval(shapingScrollCarosello, 20);
+
+
+
+
+//Function animation Card
+function animationCardImg(containerCardTrade,imageTrade,dataImageTrade,dataImageMouseOutTrade){
+
+    containerCardTrade.forEach((card, index) => {
+        card.addEventListener('mouseover', () => {
+            imageTrade.forEach((image, indx) => {
+                if (index == indx) {
+                    image.src = dataImageTrade[indx]
+                    card.addEventListener('mouseout', () => {
+                        image.src = dataImageMouseOutTrade[indx]
+                    })
+                }
+            })
+        })
+    })
+}
 
 //SEZIONE TRADE ANNAGIUSI
 
@@ -57,62 +61,49 @@ const dataImageTrade = [
 ]
 
 
-containerCardTrade.forEach((card, index) => {
-    card.addEventListener('mouseover', () => {
-        imageTrade.forEach((image, indx) => {
-            if (index == indx) {
-                image.src = dataImageTrade[indx]
-                card.addEventListener('mouseout', () => {
-                    image.src = dataImageMouseOutTrade[indx]
-                })
-            }
-        })
-    })
-})
+animationCardImg(containerCardTrade,imageTrade,dataImageTrade,dataImageMouseOutTrade);
 
-
-
-
-
-
-
-
-//SEZIONE BENNI EARN
-
-//BENNI sezione earn script che modifica l'immagine al passaggio del mouse
-//IMPORTANTE! scaricare le immagini delle card e inserirle dentro la directory ./assets
-//i percorsi degli assets vanno posti dentro gli array in ordine, in quanto la funzione associa
-//le immagini con indici uguali
-const imageHover = document.querySelectorAll(".card-image-earn")
-
+//CARD EARN
 const dataImageEarn = [
     "assets/earn-farm.webp",
-    "assets/earn-fixed-staking.webp",
+    "assets/earn-pools.webp",
     "assets/earn-liquidity-staking.webp",
-    "assets/earn-pools.webp"
+    "assets/earn-fixed-staking.webp",
+    "https://assets.pancakeswap.finance/web/landing/earn-pm.png"
 ]
 const dataImageOutEarn = [
     "assets/earn-farm-purple.webp",
-    "assets/earn-fixed-staking-purple.webp",
+    "assets/earn-pools-purple.webp",
     "assets/earn-liquidity-staking-purple.webp",
-    "assets/earn-pools-purple.webp"
+    "assets/earn-fixed-staking-purple.webp",
+    " https://assets.pancakeswap.finance/web/landing/earn-pm-purple.png"
 ]
-//itero la node list e il suo indice
-imageHover.forEach((image, index) => {
-    //associo un mouseover all'elemento i-esimo 
-    image.addEventListener("mouseover", () => {
-        //associa l'elemento dell'array alla src dell'immagine
-        // image.classList.add("fade-out")
-        image.src = dataImageEarn[index]
-        // setTimeout(() => {
-        //     image.classList.remove("fade-out")
-        // }, 300);
-    })
-    image.addEventListener("mouseout", () => {
-        //torna all'elemento precedente
-        image.src = dataImageOutEarn[index]
-    })
-})
+
+const containerCardEarn = document.querySelectorAll('#single-card-earn');
+const imageEarn = document.querySelectorAll('.change-image-card-earn')
+animationCardImg(containerCardEarn,imageEarn,dataImageEarn,dataImageOutEarn)
+
+//CARD GAME
+
+const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
+const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')
+
+const dataImageMouseOutGameNft = [
+    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/game-prediction-purple.png",
+    "https://assets.pancakeswap.finance/web/landing/nft-marketplace-purple.png"
+    
+]
+
+const dataImageGameNft = [
+    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors.png",
+    "https://assets.pancakeswap.finance/web/landing/game-prediction.png",
+    "https://assets.pancakeswap.finance/web/landing/nft-marketplace.png"
+
+]
+
+animationCardImg(containerCardGameNft,imageGameNft,dataImageGameNft,dataImageMouseOutGameNft)
+
 
 //SEZIONE BENNI MONETINA
 //script monetina
@@ -324,37 +315,7 @@ function shapingScrollCarosello2() {
     }
 }
 setInterval(shapingScrollCarosello2,30)
-//GAME & NFT RAPISARDI
-const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
-const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')
 
-const dataImageMouseOutGameNft = [
-    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors-purple.png",
-    "https://assets.pancakeswap.finance/web/landing/game-prediction-purple.png",
-    "https://assets.pancakeswap.finance/web/landing/nft-marketplace-purple.png"
-    
-]
-
-const dataImageGameNft = [
-    "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors.png",
-    "https://assets.pancakeswap.finance/web/landing/game-prediction.png",
-    "https://assets.pancakeswap.finance/web/landing/nft-marketplace.png"
-
-]
-
-
-containerCardGameNft.forEach((card, index) => {
-    card.addEventListener('mouseover', () => {
-        imageGameNft.forEach((image, indx) => {
-            if (index == indx) {
-                image.src = dataImageGameNft[indx]
-                card.addEventListener('mouseout', () => {
-                image.src = dataImageMouseOutGameNft[indx]
-                })
-            }
-        })
-    })
-})
 
 
 
