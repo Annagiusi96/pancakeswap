@@ -262,8 +262,7 @@
 
 @media screen and (min-width: 576px) {
     .container-central-div-join {
-        /* width: 340px; */
-        padding: 24px 0px 24px 60px;
+    
         height: 340px;
 
     }
