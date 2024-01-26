@@ -129,11 +129,17 @@ function monetina() {
 // document.addEventListener("scroll",()=>monetina())
 
 function handleIntersection(entries, observer) {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1// La funzione di callback verrà chiamata quando almeno il 50% dell'elemento è visibile
+    };
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             // Avvia l'animazione solo se l'elemento è visibile nella viewport
             intervalID = setInterval(monetina, 100);
             observer.unobserve(img);
+            
         }
     });
 }
@@ -172,7 +178,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
             clearInterval(intervalIDlineSxOrizontal)
         }
     }
-    const intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
+    
     //linea orizontale destra
     const startMenoX = 500;
     const startMenoY = 300
@@ -197,9 +203,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         }
     }
     //parte la seconda linea dopo che ha finito la prima
-    setTimeout(() => {
-        intervalIDlineDxOrizontal = setInterval(() => dxLineDraw(), 10)
-    }, 1500);
+
 
 
     //linea verticale  destra
@@ -239,10 +243,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
             shaping1.classList.add(`show-scroll`)
         }
     }
-    setTimeout(() => {
-        idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
-        idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
-    }, 1000);
+   
 
 
 
@@ -267,12 +268,9 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
             clearInterval(intervalIDUpRight)
         }
     }
-    setTimeout(() => {
-        intervalIDUpRight = setInterval(() => verticalLineDrawrightSu(), 10);
-        intervalIDDownRight = setInterval(() => verticalLineDrawrightGiu(), 10);
-    }, 2200);
 
 
+let intervalIDUpRight
     let currentIdVerticalRightDown = startSottoDxY
     let intervalIDDownRight
     //metodi di costruzione delle linee sul canvas
@@ -287,6 +285,50 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
             clearInterval(intervalIDDownRight)
         }
     }
+document.addEventListener('DOMContentLoaded', function () {
+   
+
+    // ... Altri settaggi del canvas ...
+
+    // Opzioni per l'Intersection Observer
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.9 // La funzione di callback verrà chiamata quando almeno il 50% dell'elemento è visibile
+    };
+
+    // Funzione di callback per l'Intersection Observer
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // L'elemento è entrato nella viewport, avvia le animazioni
+               setTimeout(() => {
+                   intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
+               }, 1300);
+                setTimeout(() => {
+                    intervalIDlineDxOrizontal = setInterval(() => dxLineDraw(), 10)
+                }, 2500);
+                setTimeout(() => {
+                    intervalIDUpRight = setInterval(() => verticalLineDrawrightSu(), 10);
+                    intervalIDDownRight = setInterval(() => verticalLineDrawrightGiu(), 10);
+                }, 3400);
+                setTimeout(() => {
+                    idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
+                    idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
+                }, 2100);
+
+                // Puoi anche smettere di osservare l'elemento dopo che è stato visualizzato una volta
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Creazione dell'Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    // Osserva l'elemento desiderato
+    observer.observe(canvasMonetina);
+});
 
 
 const shapingCarosello1 = document.querySelector('.shaping-infinite-scrolling-container1');
