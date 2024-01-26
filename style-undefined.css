@@ -44,9 +44,6 @@
 
 .join-our-community-container-inner {
     width: 100%;
-    /* margin: 0px;
-    max-width: 968px;
-    padding: 0px 16px; */
     display: flex;
     justify-content: space-between;
 }
@@ -116,11 +113,11 @@
 }
 
 
-@media screen and (min-width: 852px) {
+
     .join-container-central-inner {
         padding: 40px;
     }
-}
+
 
 .join-container-central-inner {
     display: flex;
@@ -140,7 +137,7 @@
 }
 
 .join-our-title h2 {
-    font-size: 40px;
+    font-size: 40x;
     font-weight: 600;
     line-height: 1.1;
 }
@@ -356,7 +353,7 @@
     .container-central-div-join {
         /* width: 340px; */
         /* padding: 24px 0px 24px 60px; */
-        height: 340px;
+        /* height: 340px; */
 
     }
 }
