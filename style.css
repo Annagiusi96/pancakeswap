@@ -1224,25 +1224,31 @@ a {
     top: 320px;
     left: 100px;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 960px) {
     .container-monetina-carosello {
         flex-direction: column;
         align-items: center;
     }
+        .partner-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+                .container-total-monetina{
+                    background-color: red;
+                    
+                }
 
     .img-monetina {
         width: 100%;
         height: auto;
     }
-    .canvas-container{
+   .canvasMonetina{
         transform: rotate(90deg);
     }
-    .eco,
-    .partner,
-    .full-partner-carousel {
-        font-size: 1.5rem;
-    }
-.shaping-infinite-scrolling-container1{
+   
+.shaping-infinite-scrolling-container1,
+.shaping-infinite-scrolling-container2{
     position: relative;
         width: 98vw;
         height: 4rem;
@@ -1251,8 +1257,25 @@ a {
         mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
         border-radius: 12px;
         display: flex;
-        flex-direction: row;
+        
         white-space: nowrap;
+}
+.shaping-infinite-scrolling-container1{
+    flex-direction: row;
+    top: 100px;
+    left: 0;
+    background-color: transparent;
+}
+.shaping-infinite-scrolling-container2{
+    flex-direction: row;
+    top: -150px;
+    left: 0;
+}
+.eco{
+    position: inherit;
+}
+.partner{
+    position: inherit;
 }
     
 }
