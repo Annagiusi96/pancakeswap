@@ -153,19 +153,23 @@ const shaping1 = document.querySelector(`#show-scroll`)
 const shaping2 = document.querySelector(`.shaping-scroll-element2`)
 
     const canvasMonetina = document.querySelector('.canvasMonetina');
+const showShaping1 = document.querySelector(`.shaping-infinite-scrolling-container1`)
+const showShaping2 = document.querySelector(`.shaping-infinite-scrolling-container2`)
+const eco = document.querySelector(`.eco`)
+const partner = document.querySelector(`.partner`)
     const ctx = canvasMonetina.getContext('2d')
     canvasMonetina.width = 800
     canvasMonetina.height = 800
     //linea orizontale s 
     const startX = 300;
-    const startY = 500
+    const startY = 400
     const endX = 150
-    const endY = 500
-    ctx.strokeStyle = 'white';
+    const endY = 400
+ctx.strokeStyle = `#a881fc80`;
     ctx.lineWidth = 2;
     ctx.zIndex = 1000
     let currentX = startX
-
+let intervalIDlineSxOrizontal
     //metodi doszionedellinee sul canvas
     function sxLineDraw() {
         currentX -= 2
@@ -176,6 +180,8 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentX == (startX - endX)) {
             clearInterval(intervalIDlineSxOrizontal)
+            showShaping1.style.height = `200px`
+            eco.style.height = `50px`
         }
     }
     
@@ -184,9 +190,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
     const startMenoY = 300
     const endMenoX = 650
     const endMenoY = 300
-    ctx.strokeStyle = 'White';
-    ctx.lineWidth = 2;
-    ctx.zIndex = 1000
+
     let currentDXX = startMenoX
     let intervalIDlineDxOrizontal
     //metodi di costruzione delle linee sul canvas
@@ -199,7 +203,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentDXX === 650) {
             clearInterval(intervalIDlineDxOrizontal)
-
+            
         }
     }
     //parte la seconda linea dopo che ha finito la prima
@@ -211,9 +215,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
     const startSottoSxY = 500
     const endSottoSxX = 150
     const endSottoSxY = 700
-    ctx.strokeStyle = 'White';
-    ctx.lineWidth = 2;
-    ctx.zIndex = 1000
+
     let idIntervallSuLeft
     let idIntervallGiuLeft
     let currentLeftIdgiu = startSottoSxY
@@ -228,6 +230,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentLeftIdSU === startSottoSxX) {
             clearInterval(idIntervallSuLeft)
+            
         }
     }
     function verticalLineDrawLeftSu() {
@@ -240,7 +243,9 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentLeftIdgiu === 700) {
             clearInterval(idIntervallGiuLeft)
-            shaping1.classList.add(`show-scroll`)
+            showShaping2.style.height = `200px`
+            partner.style.height = `50px`
+            //mettere partner
         }
     }
    
@@ -252,9 +257,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
     const startSottoDxY = 300
     const endSottoDxX = 650
     const endSottoDxY = 700
-    ctx.strokeStyle = 'White'; // Rosso
-    ctx.lineWidth = 2; // Spessore della linea
-    ctx.zIndex = 1000
+
         let currentIdVerticalRightUp = startSottoDxY
     //metodi di costruzione delle linee sul canvas
     function verticalLineDrawrightSu() {
@@ -266,6 +269,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentIdVerticalRightUp == 700) {
             clearInterval(intervalIDUpRight)
+            
         }
     }
 
@@ -283,6 +287,8 @@ let intervalIDUpRight
         ctx.closePath();
         if (currentIdVerticalRightDown == 150) {
             clearInterval(intervalIDDownRight)
+            
+
         }
     }
 document.addEventListener('DOMContentLoaded', function () {
@@ -371,7 +377,7 @@ function shapingScrollCaroselloTop1() {
     }
 }
 function shapingScrollCaroselloLeft1() {
-    if (shapingCarosello1.scrollLeft >= shapingCarosello1.scrollWidth / 2) {
+    if (shapingCarosello1.scrollLeft > shapingCarosello1.scrollWidth / 2) {
         shapingCarosello1.scrollLeft = 0;
     } else {
         shapingCarosello1.scrollLeft += 1;

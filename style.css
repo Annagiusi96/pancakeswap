@@ -1112,11 +1112,13 @@ a {
     position: relative;
     font-size: 40px;
     font-weight: 600;
-    top: 280px;
+    top: 130px;
     left: 100px;
     font-size: 2rem;
-    height: 50px;
+    height: 0px;
     width: fit-content;
+    transition: all 1s ease-in;
+    overflow: hidden;
 }
 
 .partner {
@@ -1128,8 +1130,10 @@ a {
     top: 100px;
     left: -80px;
     font-size: 2rem;
-    height: 50px;
+    height: 0px;
     width: fit-content;
+    overflow: hidden;
+    transition: all 1s ease-in;
 }
 
 .full-partner-carousel {
@@ -1198,10 +1202,11 @@ a {
     flex-direction: column;
     gap: 10px;
     width: 200px;
-    height: 150px;
+    height: 0px;
     top: 150px;
     right: 80px;
-    overflow: hidden
+    overflow: hidden;
+    transition: height 2s ease;
 }
 
 .shaping-infinite-scrolling-container1 {
@@ -1218,38 +1223,44 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 200px;
-    height: 150px;
+    width: 220px;
+    height: 0px;
     overflow: hidden;
-    top: 320px;
+    top: 200px;
     left: 100px;
+    transition: height 2s ease;
 }
+
 @media only screen and (max-width: 960px) {
     .container-monetina-carosello {
         flex-direction: column;
         align-items: center;
     }
-        .partner-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-                .container-total-monetina{
-                    background-color: red;
-                    
-                }
+
+    .partner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-ecosistem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .img-monetina {
         width: 100%;
         height: auto;
     }
-   .canvasMonetina{
+
+    .canvasMonetina {
         transform: rotate(90deg);
     }
-   
-.shaping-infinite-scrolling-container1,
-.shaping-infinite-scrolling-container2{
-    position: relative;
+
+    .shaping-infinite-scrolling-container1,
+    .shaping-infinite-scrolling-container2 {
+        position: relative;
         width: 98vw;
         height: 4rem;
         overflow-x: hidden;
@@ -1257,25 +1268,31 @@ a {
         mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
         border-radius: 12px;
         display: flex;
-        
         white-space: nowrap;
-}
-.shaping-infinite-scrolling-container1{
-    flex-direction: row;
-    top: 100px;
-    left: 0;
-    background-color: transparent;
-}
-.shaping-infinite-scrolling-container2{
-    flex-direction: row;
-    top: -150px;
-    left: 0;
-}
-.eco{
-    position: inherit;
-}
-.partner{
-    position: inherit;
-}
-    
+    }
+
+    .shaping-infinite-scrolling-container1 {
+        flex-direction: row;
+        top: 100px;
+        left: 0;
+        background-color: transparent;
+    }
+
+    .shaping-infinite-scrolling-container2 {
+        flex-direction: row;
+        top: -150px;
+        left: 0;
+    }
+
+    .eco {
+        position: inherit;
+        display: flex;
+        
+        
+    }
+
+    .partner {
+        position: inherit;
+    }
+
 }
