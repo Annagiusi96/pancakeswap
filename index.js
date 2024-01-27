@@ -342,7 +342,7 @@ shapingElements2.forEach(e => {
     shapingCarosello2.appendChild(cloneNode);
 })
 
-function shapingScrollCarosello2() {
+function shapingScrollCaroselloTop2() {
     console.log("Resetting scrollTop to 0");
     if (shapingCarosello2.scrollTop >= shapingCarosello2.scrollHeight / 2) {
         shapingCarosello2.scrollTop = 0;
@@ -350,10 +350,14 @@ function shapingScrollCarosello2() {
         shapingCarosello2.scrollTop += 1;
     }
 }
-setInterval(shapingScrollCarosello2, 30)
-
-
-
+function shapingScrollCaroselloLeft2() {
+    console.log("Resetting scrollTop to 0");
+    if (shapingCarosello2.scrollLeft >= shapingCarosello2.scrollWidth/ 2) {
+        shapingCarosello2.scrollLeft = 0;
+    } else {
+        shapingCarosello2.scrollLeft += 1;
+    }
+}
 
 shapingElements1.forEach(e => {
     const cloneNode = e.cloneNode(true);
@@ -373,18 +377,29 @@ function shapingScrollCaroselloLeft1() {
         shapingCarosello1.scrollLeft += 1;
     }
 }
-let intervalIdMedia
-const mediaQuery = window.matchMedia('(max-width: 768px)')
-function handlemediaquery(media) {
+
+
+
+const mediaQuery = window.matchMedia('(max-width: 1200px)');
+
+function handleMediaQuery(media) {
     if (media.matches) {
-        console.log(`media on`);
         setInterval(shapingScrollCaroselloLeft1, 20);
-    } else{
-        console.log(`media off`);
+        setInterval(shapingScrollCaroselloLeft2, 20);
+        console.log(`Media query attiva`);
+    } else {
+        console.log(`Media query non attiva`);
         setInterval(shapingScrollCaroselloTop1, 20);
+        setInterval(shapingScrollCaroselloTop2, 30)
     }
 }
-handlemediaquery(mediaQuery)
+
+// Esegui la funzione di callback iniziale
+handleMediaQuery(mediaQuery);
+
+// Aggiungi l'ascoltatore per gestire eventuali cambiamenti nella media query
+mediaQuery.addEventListener('change', handleMediaQuery);
+
 
 
 //GAME & NFT RAPISARDI
