@@ -1085,7 +1085,7 @@ a {
 }
 
 .container-monetina-carosello {
-        display: flex;
+    display: flex;
     width: 100vw;
 }
 
@@ -1093,7 +1093,7 @@ a {
     width: 600px;
     height: 600px;
     background: rgb(93, 0, 193);
-        background: radial-gradient(circle, rgba(93, 0, 193, 1) 0%, rgba(149, 51, 255, 0) 51%);
+    background: radial-gradient(circle, rgba(93, 0, 193, 1) 0%, rgba(149, 51, 255, 0) 51%);
 
 
 }
@@ -1118,17 +1118,18 @@ a {
     height: 50px;
     width: fit-content;
 }
-.partner{
+
+.partner {
     color: var(--colors-text);
-        line-height: 1.5;
-        position: relative;
-        font-size: 40px;
-        font-weight: 600;
-        top: 100px;
-        left: -80px;
-        font-size: 2rem;
-        height: 50px;
-        width: fit-content;
+    line-height: 1.5;
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    top: 100px;
+    left: -80px;
+    font-size: 2rem;
+    height: 50px;
+    width: fit-content;
 }
 
 .full-partner-carousel {
@@ -1148,24 +1149,28 @@ a {
 
 .canvasMonetina {
     position: absolute;
+    display: flex;
     width: 600px;
     height: 600px;
     background-color: transparent;
 }
-@media screen and (max-width: 1200px) {
-    .canvasMonetina {
-           transform: rotate(90deg);
-        }
-}
+
+
+
 .shaping-scroll-element1 {
     background-color: var(--colors-backgroundAlt);
-    color: #fff;
     border: 1px solid var(--colors-cardBorder);
     width: fit-content;
     display: flex;
     color: var(--colors-text);
+    max-width: 200px;
     gap: 10px;
     box-shadow: black;
+}
+
+.color {
+    color: rgb(168, 129, 252);
+    ;
 }
 
 .shaping-scroll-element2 {
@@ -1179,9 +1184,6 @@ a {
 
 }
 
-.container-monetina-carosello {
-    display: flex;
-}
 
 .shaping-infinite-scrolling-container2 {
     position: relative;
@@ -1221,4 +1223,25 @@ a {
     overflow: hidden;
     top: 320px;
     left: 100px;
+}
+@media only screen and (max-width: 1200px) {
+    .container-monetina-carosello {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-monetina {
+        width: 100%;
+        height: auto;
+    }
+    .canvas-container{
+        transform: rotate(90deg);
+    }
+    .eco,
+    .partner,
+    .full-partner-carousel {
+        font-size: 1.5rem;
+    }
+
+    
 }
