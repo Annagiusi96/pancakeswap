@@ -1242,6 +1242,17 @@ a {
     .full-partner-carousel {
         font-size: 1.5rem;
     }
-
+.shaping-infinite-scrolling-container1{
+    position: relative;
+        width: 98vw;
+        height: 4rem;
+        overflow-x: hidden;
+        max-width: 1063px;
+        mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+}
     
 }

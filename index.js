@@ -333,21 +333,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const shapingCarosello1 = document.querySelector('.shaping-infinite-scrolling-container1');
 const shapingElements1 = document.querySelectorAll('.shaping-scroll-element1')
-
-shapingElements1.forEach(e => {
-    console.log(e)
-    const cloneNode = e.cloneNode(true);
-    shapingCarosello1.appendChild(cloneNode);
-})
-
-function shapingScrollCarosello1() {
-    if (shapingCarosello1.scrollTop >= shapingCarosello1.scrollHeight / 2) {
-        shapingCarosello1.scrollTop = 0;
-    } else {
-        shapingCarosello1.scrollTop += 1;
-    }
-}
-const carosellointervall1 = setInterval(shapingScrollCarosello1, 20);
 const shapingCarosello2 = document.querySelector('.shaping-infinite-scrolling-container2');
 const shapingElements2 = document.querySelectorAll('.shaping-scroll-element2')
 
@@ -365,7 +350,43 @@ function shapingScrollCarosello2() {
         shapingCarosello2.scrollTop += 1;
     }
 }
-setInterval(shapingScrollCarosello2,30)
+setInterval(shapingScrollCarosello2, 30)
+
+
+
+
+shapingElements1.forEach(e => {
+    const cloneNode = e.cloneNode(true);
+    shapingCarosello1.appendChild(cloneNode);
+})
+function shapingScrollCaroselloTop1() {
+    if (shapingCarosello1.scrollTop >= shapingCarosello1.scrollHeight / 2) {
+        shapingCarosello1.scrollTop = 0;
+    } else {
+        shapingCarosello1.scrollTop += 1;
+    }
+}
+function shapingScrollCaroselloLeft1() {
+    if (shapingCarosello1.scrollLeft >= shapingCarosello1.scrollWidth / 2) {
+        shapingCarosello1.scrollLeft = 0;
+    } else {
+        shapingCarosello1.scrollLeft += 1;
+    }
+}
+let intervalIdMedia
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+function handlemediaquery(media) {
+    if (media.matches) {
+        console.log(`media on`);
+        setInterval(shapingScrollCaroselloLeft1, 20);
+    } else{
+        console.log(`media off`);
+        setInterval(shapingScrollCaroselloTop1, 20);
+    }
+}
+handlemediaquery(mediaQuery)
+
+
 //GAME & NFT RAPISARDI
 const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
 const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')
