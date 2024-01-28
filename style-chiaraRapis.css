@@ -350,7 +350,7 @@ width: 150px;
   .footerLanguageEN:hover {
     opacity: 0.4;
   }
-
+  
 
   .footerListLanguage button{
    width: 100%;
@@ -377,7 +377,7 @@ width: 150px;
 
 .footerRight img {
     width: 25px;
-    margin-right: 25px;
+    margin-right: 10px;
     transition: 0.3s;
 }
 .footerRight img:hover{
@@ -418,6 +418,9 @@ width: 150px;
 }
 .fa-arrow-right{
     margin-left: 0.5rem;
+}
+.footer-pancake-display-none{
+    display: none;
 }
 
 /* CARD GAME & NFT */
@@ -531,3 +534,73 @@ width: 150px;
     color: var(--colors-primary);
     transition: .25s ease-in-out;
 }
+
+@media screen and (max-width: 900px){
+    .footer{
+        padding: 0px 40px 32px;
+        margin-bottom: 0px;
+        flex-direction: column;    
+    }
+    .footer-list{
+        width: 100%;
+        margin-bottom: 0px;
+        flex-direction: column;  
+    }
+    .footerRight{
+        width: 250px;
+     }
+     .footer-list ul{
+        margin-bottom: 40px;
+     }
+     .footer-footer{
+        padding-top: 40px;
+        
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .footer{
+        padding-left: 20px;
+    }
+   .footer-pancake{
+    display: none;
+   }
+   
+   .footer-footer{
+    order: 1;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-bottom: 1px solid #383241;
+    padding-bottom: 30px;
+    padding-top: 0px;
+
+   }
+   .footerRight
+   {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 40px;
+   }
+   .footer-list{order: 2;
+    padding-top: 20px;}
+   .footerLink{
+    order: 3;
+   }
+    .footer-pancake-display-none{
+        order: 1;
+        display: block;
+        padding-top: 30px;
+        
+    }
+    .footer-pancake-display-none img{
+        width: 30vw;
+    }
+}
+
+
+
+
+
+
+
