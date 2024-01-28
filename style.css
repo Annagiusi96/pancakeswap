@@ -1086,7 +1086,7 @@ a {
 
 .container-monetina-carosello {
     display: flex;
-    width: 100vw;
+    justify-content: center;
 }
 
 .canvas-container {
@@ -1104,6 +1104,15 @@ a {
     height: 600px;
 
 
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #201335;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #462181;
 }
 
 .eco {
@@ -1150,7 +1159,10 @@ a {
     /* background-color: aqua; */
 
 }
-
+.container-monetina{
+    border: 1px solid red;
+    width: 0px;
+}
 .canvasMonetina {
     position: absolute;
     display: flex;
@@ -1264,15 +1276,18 @@ a {
         width: 98vw;
         height: 4rem;
         overflow-x: hidden;
+        height: 50px;
         max-width: 1063px;
         mask-image: linear-gradient(to left, transparent, black 80px, black calc(100% - 80px), transparent);
         border-radius: 12px;
         display: flex;
+        
         white-space: nowrap;
     }
 
     .shaping-infinite-scrolling-container1 {
         flex-direction: row;
+        align-items: end;
         top: 100px;
         left: 0;
         background-color: transparent;
@@ -1285,14 +1300,17 @@ a {
     }
 
     .eco {
-        position: inherit;
-        display: flex;
+        position: relative;
+        left: 30px;
+        top: 230px;
         
         
     }
 
     .partner {
-        position: inherit;
+        position: relative;
+        left: 30px;
+            top: -30px;
     }
 
 }
