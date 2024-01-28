@@ -556,6 +556,12 @@ width: 150px;
         padding-top: 40px;
         
     }
+    .join-everyone-text{
+        white-space: nowrap;        
+    }
+    .join-everyone-text-h3{
+        font-size: 40px;
+    }
 
 }
 
@@ -595,6 +601,12 @@ width: 150px;
     }
     .footer-pancake-display-none img{
         width: 30vw;
+    }
+    .join-everyone-text{
+        white-space: nowrap;        
+    }
+    .join-everyone-text-h3{
+        font-size: 30px;
     }
 }
 
