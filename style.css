@@ -293,14 +293,14 @@ body {
     color: var(--colors-secondary);
 }
 
-h2 {
-    text-align: center;
-    padding: 5px;
-    line-height: 1.5;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-}
+  .title-h2 h2 {
+      text-align: center;
+      padding: 5px;
+      line-height: 1.5;
+      font-size: 40px;
+      font-weight: 600;
+      text-align: center;
+  }
 
 .featurednews-container {
     display: flex;
@@ -672,6 +672,8 @@ a {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), rgb(129, 216, 234);
 }
 
+
+
 /* DISCOVER ECO SYSTEM */
 .onda-top-discover {
     position: absolute;
@@ -869,12 +871,13 @@ a {
     transition: .25s ease-in-out;
 }
 
-
-
-
-
-
-/* BENNI EARN */
+#dimension-img-earn{
+    width:296px;
+    height:360px;
+    color: transparent;
+    margin-right: -72px;
+    margin-left: auto;
+}
 
 .discover-ecosystem-cards {
     display: flex;
@@ -882,98 +885,60 @@ a {
     flex-direction: column;
 }
 
-@media screen and (min-width: 1200px) {
-    .earn {
-        width: 1152px;
-        background: var(--colors-gradientBubblegum);
+
+@media screen and (max-width: 660px){
+    .shaping-the-future-text{
         display: flex;
-        flex-direction: column;
-        /* padding: 48px 24px 24px; */
-        margin: 48px 0px 0px;
-        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
-}
+    .shaping-the-future-numbers{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .shaping-text-and-image img{
+        display: none;
+    }
+    .img-end img{
+        display: none;
+    }
 
-.earn-container {
-    display: flex;
+    .container-inner-card-trade{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container-inner-options-card-trade{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .single-card-trade{
+        width: 150px;
+    }
+    #media-query-column-earn{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container-inner-card-game-nft{
+        flex-wrap: wrap;
+    }
+    .img-social-left{
+        display: none;
+    }
+    .img-ring-right{
+        right: 390px;
+    }
+    .join-our-community-container-inner{
+        margin: 0px;
+        max-width: 968px;
+        padding: 0px 16px;
+    }
+    /* .join-our-title h2{
+        font-size: 32px;
+    } */
 }
-
-.card-h2-container {
-    margin: 30px;
-}
-
-.card-h2-container h2 {
-    color: var(--colors-secondary);
-    font-size: 32px;
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.earn-bunny {
-    position: relative;
-    left: 100px;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    gap: 30px;
-}
-
-.card-container .card {
-    position: relative;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card-earn-p {
-    color: var(--colors-text);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-}
-
-.earn-h3 {
-    color: var(--colors-text);
-    margin-bottom: 8px;
-    font-size: 20px;
-    line-height: 110%;
-    font-weight: 600;
-}
-
-.earn-a {
-    color: var(--colors-textSubtle);
-    line-height: 1.5;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.earn-a:hover {
-    color: var(--colors-primary);
-    transition: .25s ease-in-out;
-}
-
-.image-container {
-    position: relative;
-}
-
-.card-image-earn {
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-    opacity: 0;
-}
-
-.snow-image {
-    position: absolute;
-}
-
-/* BENNI EARN FINE */
 /* full-potential BENNI INIZIO */
 .full-potential {
     width: 950px;
