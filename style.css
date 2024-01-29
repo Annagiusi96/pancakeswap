@@ -1131,7 +1131,7 @@ body::-webkit-scrollbar-thumb {
 .canvasMonetina {
     position: absolute;
     display: flex;
-    width: 600px;
+    max-width: 600px;
     height: 600px;
     background-color: transparent;
 }
@@ -1213,7 +1213,11 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         align-items: center;
     }
-
+.canvas-container{
+    display: flex;
+justify-self: center;
+align-items: center;
+}
     .partner-container {
         display: flex;
         flex-direction: column;
@@ -1233,6 +1237,7 @@ body::-webkit-scrollbar-thumb {
 
     .canvasMonetina {
         transform: rotate(90deg);
+        width: 100vw;
     }
 
     .shaping-infinite-scrolling-container1,
@@ -1312,4 +1317,11 @@ color: white;
     color:var(--colors-secondary);
     font-weight: bolder;
     font-size: 20px;
+}
+.full-potential-section{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: #201335;
+    
 }
