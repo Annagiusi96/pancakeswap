@@ -319,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
                     idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
                 }, 2100);
+                
 
                 // Puoi anche smettere di osservare l'elemento dopo che è stato visualizzato una volta
                 observer.unobserve(entry.target);
@@ -402,9 +403,15 @@ handleMediaQuery(mediaQuery);
 
 // Aggiungi l'ascoltatore per gestire eventuali cambiamenti nella media query
 mediaQuery.addEventListener('change', handleMediaQuery);
-
-
-
+const milion = document.querySelector(`.milion`)
+let i=0
+function dinamicNumbers() {
+    if (i<730) {
+        milion.innerText=i
+        i++
+    }
+}
+setInterval(dinamicNumbers, 2); 
 //GAME & NFT RAPISARDI
 const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
 const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')

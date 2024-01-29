@@ -1312,5 +1312,12 @@ body::-webkit-scrollbar-thumb {
         left: 30px;
             top: -30px;
     }
+    .full-potential{
+        max-width:fit-content;
+        flex-wrap: wrap;
+    }
 
+}
+.milion{
+color: white;
 }
