@@ -38,9 +38,10 @@ btnLanguage.addEventListener('mouseout', ()=>{
     // listLang.classList.remove('footerLczz')
     listLang.addEventListener('mouseout', ()=>{
         listLang.style.opacity= 0;
+        listLang.style.display=none;
         
     },);
-    listLang.style.display=none;
+    
     listLang.style.opacity= 0;
     
 },);
