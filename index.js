@@ -19,6 +19,32 @@ function shapingScrollCarosello() {
 
 const caroselloInterval = setInterval(shapingScrollCarosello, 20);
 
+//Footer Language
+const btnLanguage = document.querySelector('#footerLangEN');
+const listLang= document.querySelector('.footerAllLanguage');
+
+
+btnLanguage.addEventListener('mouseover', ()=>{
+    // listLang.classList.add('footerLczz')
+    listLang.style.opacity= 1 ;
+    listLang.addEventListener('mouseover', ()=>{
+        listLang.style.opacity= 1;
+        listLang.style.display= block;
+        // listLang.classList.add('footerLczz')
+    })
+    })
+    
+btnLanguage.addEventListener('mouseout', ()=>{
+    // listLang.classList.remove('footerLczz')
+    listLang.addEventListener('mouseout', ()=>{
+        listLang.style.opacity= 0;
+        listLang.style.display=none;
+        
+    },);
+    
+    listLang.style.opacity= 0;
+    
+},);
 
 
 
@@ -354,16 +380,5 @@ function showSwiperSlide(index) {
 
 
 
-//Footer Language
-const btnLanguage = document.querySelector('.footerLanguageEN');
-const listLang= document.querySelector('.footerAllLanguage');
 
-btnLanguage.addEventListener('mouseover', ()=>{
-    listLang.style.opacity= 1 ;
-})
-
-btnLanguage.addEventListener('mouseout', ()=>{
-    // listLang.style.opacity= 0;
-    setInterval(()=> {listLang.style.opacity= 0; }, 5000);
-},);
     
