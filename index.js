@@ -207,9 +207,6 @@ let intervalIDlineSxOrizontal
         }
     }
     //parte la seconda linea dopo che ha finito la prima
-
-
-
     //linea verticale  destra
     const startSottoSxX = 150
     const startSottoSxY = 500
