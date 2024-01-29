@@ -1321,3 +1321,30 @@ body::-webkit-scrollbar-thumb {
 .milion{
 color: white;
 }
+.cake-figure-contaIner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cake-figure-contaIner h3{
+    color: var(--colors-white);
+    font-size: 20px;
+}
+.container-dinamic-num{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+}
+.cake-figure{
+    width: 200px;
+    border-left: 1px solid #201335;
+    padding: 10px;
+    
+}
+.span-count{
+    color:var(--colors-secondary);
+    font-weight: bolder;
+    font-size: 20px;
+}

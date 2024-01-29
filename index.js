@@ -147,6 +147,7 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
 observer.observe(img);
+
 //inizio
 //selettori dei container dei caroselli
 const shaping1 = document.querySelector(`#show-scroll`)
@@ -288,16 +289,14 @@ let intervalIDUpRight
 
         }
     }
-document.addEventListener('DOMContentLoaded', function () {
-   
 
-    // ... Altri settaggi del canvas ...
+    document.addEventListener('DOMContentLoaded', function () {
 
     // Opzioni per l'Intersection Observer
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.9 // La funzione di callback verrà chiamata quando almeno il 50% dell'elemento è visibile
+        threshold: 0.9 
     };
 
     // Funzione di callback per l'Intersection Observer
@@ -404,14 +403,52 @@ handleMediaQuery(mediaQuery);
 // Aggiungi l'ascoltatore per gestire eventuali cambiamenti nella media query
 mediaQuery.addEventListener('change', handleMediaQuery);
 const milion = document.querySelector(`.milion`)
-let i=0
+let a=0
 function dinamicNumbers() {
-    if (i<730) {
-        milion.innerText=i
-        i++
+    if (a<730) {
+        milion.innerText =`$ ${a}  Milion`
+        a++
     }
 }
 setInterval(dinamicNumbers, 2); 
+const supply = document.querySelector(`.supply`)
+let b=0
+function dinamicNumbersa() {
+    if (b<= 2000) {
+        supply.innerText =` ${b} `
+        b+=500
+    }else{
+        clearInterval(clearSupplyset)
+        supply.innerText = ` 283,221,454`
+    }
+}
+const clearSupplyset=setInterval(dinamicNumbersa, 10); 
+const totalSupply = document.querySelector(`.total-supply`)
+let c=0
+function dinamicNumbersc() {
+    if (c< 500) {
+        totalSupply.innerText =` ${c} `
+        c++
+    }
+    else {
+        clearInterval(cleartotalset)
+        totalSupply.innerText = ` 394,615,093`
+    }
+}
+const cleartotalset= setInterval(dinamicNumbersc, .1); 
+const burn = document.querySelector(`.burn`)
+let d=0
+function dinamicNumbersd() {
+    if (d < 1144286783) {
+        burn.innerText =` ${d} `
+        d += 120287361
+    }
+    else {
+        clearInterval(clearBuernSet)
+        burn.innerText = `1,144,286,783`
+    }
+}
+const clearBuernSet = setInterval(dinamicNumbersd, 100); 
 //GAME & NFT RAPISARDI
 const imageGameNft = document.querySelectorAll('.change-image-card-game-nft')
 const containerCardGameNft = document.querySelectorAll('.single-card-game-nft')
