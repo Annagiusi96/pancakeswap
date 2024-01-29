@@ -22,25 +22,25 @@ const caroselloInterval = setInterval(shapingScrollCarosello, 20);
 //Footer Language
 const btnLanguage = document.querySelector('#footerLangEN');
 const listLang= document.querySelector('.footerAllLanguage');
-let isBtnMouseOver =false;
+
 
 btnLanguage.addEventListener('mouseover', ()=>{
-    isBtnMouseOver = true;
-
-        listLang.addEventListener('mouseover', ()=>{
-            if(isBtnMouseOver=true){
-        listLang.style.opacity= 1 ;
-        listLang.style.display=block;}
-    })
+    // listLang.classList.add('footerLczz')
     listLang.style.opacity= 1 ;
+    listLang.addEventListener('mouseover', ()=>{
+        listLang.style.opacity= 1;
+        listLang.style.display= block;
+        // listLang.classList.add('footerLczz')
     })
-
-
+    })
+    
 btnLanguage.addEventListener('mouseout', ()=>{
-    isBtnMouseOver = false;
+    // listLang.classList.remove('footerLczz')
     listLang.addEventListener('mouseout', ()=>{
         listLang.style.opacity= 0;
+        
     },);
+    listLang.style.display=none;
     listLang.style.opacity= 0;
     
 },);

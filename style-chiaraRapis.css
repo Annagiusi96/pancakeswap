@@ -16,6 +16,7 @@
     position: relative;
 }
 
+
 .join-everyone-text-h3 {
     color: white;
     line-height: 1.5;
@@ -23,6 +24,10 @@
     font-weight: 600;
     font-size: 40px;
     font-weight: bold;
+    display: flex;
+}
+.join-everyone-text-h3 h3{
+    padding-left: 10px;
 }
 
 .join-everyone-button {
@@ -198,8 +203,13 @@
     color: white;
 }
 
+
 .footer-pancake img {
     width: 160px;
+}
+.footer-pancake-responsive img{
+    display: none;
+
 }
 
 .footerLink {
@@ -332,6 +342,10 @@ margin-right: 0.5rem;
     font-weight: 400;
     line-height: 1.5;
     font-size: 16px;
+  }
+  .footerLczz{
+    opacity: 1;
+    display: block;
   }
 
   .footerAllLanguage{
@@ -534,8 +548,16 @@ width: 150px;
     color: var(--colors-primary);
     transition: .25s ease-in-out;
 }
+@media screen and (max-width: 1200px){
+    .join-everyone-text{
+        white-space: nowrap; 
+    }
+   .footer{
+    padding-left: 8vw;
+   }
+} 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
     .footer{
         padding: 0px 40px 32px;
         margin-bottom: 0px;
@@ -560,12 +582,12 @@ width: 150px;
         white-space: nowrap;        
     }
     .join-everyone-text-h3{
-        font-size: 40px;
+        font-size: 3vw;
     }
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
     .footer{
         padding-left: 20px;
     }
@@ -602,11 +624,11 @@ width: 150px;
     .footer-pancake-display-none img{
         width: 30vw;
     }
-    .join-everyone-text{
-        white-space: nowrap;        
-    }
+   
     .join-everyone-text-h3{
-        font-size: 30px;
+        font-size: 6vw;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
