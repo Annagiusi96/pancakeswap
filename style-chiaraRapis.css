@@ -486,7 +486,7 @@ width: 150px;
     color: transparent;
     margin-left: -72px;
     width: 340px;
-    height: 340px;
+    /* height: 340px; */
 }
 
 .options-card-game-nft{

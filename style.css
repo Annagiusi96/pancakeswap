@@ -786,8 +786,9 @@ a {
 .image-trade img {
     color: transparent;
     margin-left: -72px;
-    width: 340px;
-    height: 340px;
+    /* width: 340px;
+    height: 340px; */
+    max-width: 295px;
 }
 
 .options-card-trade {
@@ -872,8 +873,9 @@ a {
 }
 
 #dimension-img-earn{
-    width:296px;
-    height:360px;
+    max-width: 296px;
+    /* width:296px;
+    height:360px; */
     color: transparent;
     margin-right: -72px;
     margin-left: auto;
@@ -885,7 +887,23 @@ a {
     flex-direction: column;
 }
 
-
+@media screen and (max-width: 740px){
+        .join-our-title h2{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 850px){
+    .container-inner-card-trade{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #media-query-column-earn{
+        flex-direction: column-reverse;
+    }
+    .container-inner-card-game-nft{
+        flex-wrap: wrap;
+    }
+}
 @media screen and (max-width: 1112px){
     .shaping-the-future-text{
         display: flex;
@@ -908,7 +926,6 @@ a {
 
     .container-inner-card-trade{
         display: flex;
-        flex-wrap: wrap;
     }
     .container-inner-options-card-trade{
         display: flex;
@@ -919,11 +936,8 @@ a {
     }
     #media-query-column-earn{
         display: flex;
-        flex-direction: column-reverse;
     }
-    .container-inner-card-game-nft{
-        flex-wrap: wrap;
-    }
+   
     .img-social-left{
         display: none;
     }
@@ -935,10 +949,11 @@ a {
         max-width: 968px;
         padding: 0px 16px;
     }
-    /* .join-our-title h2{
-        font-size: 32px;
-    } */
+
 }
+
+
+
 /* full-potential BENNI INIZIO */
 .full-potential {
     width: 950px;

@@ -1,0 +1,28 @@
+#default-carousel{
+    background-color: rebeccapurple;
+    max-width: 1152px;
+    /* margin: 20px auto; */
+    padding: 16px;
+    border-radius: 33px;
+}
+
+.container-carosello-jumbotron{
+    background-color: #21193a;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.container-1-carosello-j{
+    display: flex;
+    justify-content: center;
+}
+/* #default-carousel {
+    background-color: transparent !important;
+} */
+
+@media screen and (min-width: 968px){
+    #default-carousel{
+        height: 232px;
+    }
+}
