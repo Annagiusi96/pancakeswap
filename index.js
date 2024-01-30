@@ -146,11 +146,17 @@ function monetina() {
 // document.addEventListener("scroll",()=>monetina())
 
 function handleIntersection(entries, observer) {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1// La funzione di callback verrà chiamata quando almeno il 50% dell'elemento è visibile
+    };
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             // Avvia l'animazione solo se l'elemento è visibile nella viewport
             intervalID = setInterval(monetina, 100);
             observer.unobserve(img);
+            
         }
     });
 }
@@ -158,25 +164,30 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
 observer.observe(img);
+
 //inizio
 //selettori dei container dei caroselli
 const shaping1 = document.querySelector(`#show-scroll`)
 const shaping2 = document.querySelector(`.shaping-scroll-element2`)
 
     const canvasMonetina = document.querySelector('.canvasMonetina');
+const showShaping1 = document.querySelector(`.shaping-infinite-scrolling-container1`)
+const showShaping2 = document.querySelector(`.shaping-infinite-scrolling-container2`)
+const eco = document.querySelector(`.eco`)
+const partner = document.querySelector(`.partner`)
     const ctx = canvasMonetina.getContext('2d')
     canvasMonetina.width = 800
     canvasMonetina.height = 800
     //linea orizontale s 
     const startX = 300;
-    const startY = 500
+    const startY = 400
     const endX = 150
-    const endY = 500
-    ctx.strokeStyle = 'white';
+    const endY = 400
+ctx.strokeStyle = `#a881fc80`;
     ctx.lineWidth = 2;
     ctx.zIndex = 1000
     let currentX = startX
-
+let intervalIDlineSxOrizontal
     //metodi doszionedellinee sul canvas
     function sxLineDraw() {
         currentX -= 2
@@ -187,17 +198,17 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentX == (startX - endX)) {
             clearInterval(intervalIDlineSxOrizontal)
+            showShaping1.style.height = `200px`
+            eco.style.height = `50px`
         }
     }
-    const intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
+    
     //linea orizontale destra
     const startMenoX = 500;
     const startMenoY = 300
     const endMenoX = 650
     const endMenoY = 300
-    ctx.strokeStyle = 'White';
-    ctx.lineWidth = 2;
-    ctx.zIndex = 1000
+
     let currentDXX = startMenoX
     let intervalIDlineDxOrizontal
     //metodi di costruzione delle linee sul canvas
@@ -210,23 +221,16 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentDXX === 650) {
             clearInterval(intervalIDlineDxOrizontal)
-
+            
         }
     }
     //parte la seconda linea dopo che ha finito la prima
-    setTimeout(() => {
-        intervalIDlineDxOrizontal = setInterval(() => dxLineDraw(), 10)
-    }, 1500);
-
-
     //linea verticale  destra
     const startSottoSxX = 150
     const startSottoSxY = 500
     const endSottoSxX = 150
     const endSottoSxY = 700
-    ctx.strokeStyle = 'White';
-    ctx.lineWidth = 2;
-    ctx.zIndex = 1000
+
     let idIntervallSuLeft
     let idIntervallGiuLeft
     let currentLeftIdgiu = startSottoSxY
@@ -241,6 +245,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentLeftIdSU === startSottoSxX) {
             clearInterval(idIntervallSuLeft)
+            
         }
     }
     function verticalLineDrawLeftSu() {
@@ -253,13 +258,12 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentLeftIdgiu === 700) {
             clearInterval(idIntervallGiuLeft)
-            shaping1.classList.add(`show-scroll`)
+            showShaping2.style.height = `200px`
+            partner.style.height = `50px`
+            //mettere partner
         }
     }
-    setTimeout(() => {
-        idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
-        idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
-    }, 1000);
+   
 
 
 
@@ -268,9 +272,7 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
     const startSottoDxY = 300
     const endSottoDxX = 650
     const endSottoDxY = 700
-    ctx.strokeStyle = 'White'; // Rosso
-    ctx.lineWidth = 2; // Spessore della linea
-    ctx.zIndex = 1000
+
         let currentIdVerticalRightUp = startSottoDxY
     //metodi di costruzione delle linee sul canvas
     function verticalLineDrawrightSu() {
@@ -282,14 +284,12 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentIdVerticalRightUp == 700) {
             clearInterval(intervalIDUpRight)
+            
         }
     }
-    setTimeout(() => {
-        intervalIDUpRight = setInterval(() => verticalLineDrawrightSu(), 10);
-        intervalIDDownRight = setInterval(() => verticalLineDrawrightGiu(), 10);
-    }, 2200);
 
 
+let intervalIDUpRight
     let currentIdVerticalRightDown = startSottoDxY
     let intervalIDDownRight
     //metodi di costruzione delle linee sul canvas
@@ -302,27 +302,57 @@ const shaping2 = document.querySelector(`.shaping-scroll-element2`)
         ctx.closePath();
         if (currentIdVerticalRightDown == 150) {
             clearInterval(intervalIDDownRight)
+            
+
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+    // Opzioni per l'Intersection Observer
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.9 
+    };
+
+    // Funzione di callback per l'Intersection Observer
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // L'elemento è entrato nella viewport, avvia le animazioni
+               setTimeout(() => {
+                   intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
+               }, 1300);
+                setTimeout(() => {
+                    intervalIDlineDxOrizontal = setInterval(() => dxLineDraw(), 10)
+                }, 2500);
+                setTimeout(() => {
+                    intervalIDUpRight = setInterval(() => verticalLineDrawrightSu(), 10);
+                    intervalIDDownRight = setInterval(() => verticalLineDrawrightGiu(), 10);
+                }, 3400);
+                setTimeout(() => {
+                    idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
+                    idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
+                }, 2100);
+                
+
+                // Puoi anche smettere di osservare l'elemento dopo che è stato visualizzato una volta
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Creazione dell'Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    // Osserva l'elemento desiderato
+    observer.observe(canvasMonetina);
+});
 
 
 const shapingCarosello1 = document.querySelector('.shaping-infinite-scrolling-container1');
 const shapingElements1 = document.querySelectorAll('.shaping-scroll-element1')
-
-shapingElements1.forEach(e => {
-    console.log(e)
-    const cloneNode = e.cloneNode(true);
-    shapingCarosello1.appendChild(cloneNode);
-})
-
-function shapingScrollCarosello1() {
-    if (shapingCarosello1.scrollTop >= shapingCarosello1.scrollHeight / 2) {
-        shapingCarosello1.scrollTop = 0;
-    } else {
-        shapingCarosello1.scrollTop += 1;
-    }
-}
-const carosellointervall1 = setInterval(shapingScrollCarosello1, 20);
 const shapingCarosello2 = document.querySelector('.shaping-infinite-scrolling-container2');
 const shapingElements2 = document.querySelectorAll('.shaping-scroll-element2')
 
@@ -332,7 +362,7 @@ shapingElements2.forEach(e => {
     shapingCarosello2.appendChild(cloneNode);
 })
 
-function shapingScrollCarosello2() {
+function shapingScrollCaroselloTop2() {
     console.log("Resetting scrollTop to 0");
     if (shapingCarosello2.scrollTop >= shapingCarosello2.scrollHeight / 2) {
         shapingCarosello2.scrollTop = 0;
@@ -340,7 +370,106 @@ function shapingScrollCarosello2() {
         shapingCarosello2.scrollTop += 1;
     }
 }
-setInterval(shapingScrollCarosello2,30)
+function shapingScrollCaroselloLeft2() {
+    console.log("Resetting scrollTop to 0");
+    if (shapingCarosello2.scrollLeft >= shapingCarosello2.scrollWidth/ 2) {
+        shapingCarosello2.scrollLeft = 0;
+    } else {
+        shapingCarosello2.scrollLeft += 1;
+    }
+}
+
+shapingElements1.forEach(e => {
+    const cloneNode = e.cloneNode(true);
+    shapingCarosello1.appendChild(cloneNode);
+})
+function shapingScrollCaroselloTop1() {
+    if (shapingCarosello1.scrollTop >= shapingCarosello1.scrollHeight / 2) {
+        shapingCarosello1.scrollTop = 0;
+    } else {
+        shapingCarosello1.scrollTop += 1;
+    }
+}
+function shapingScrollCaroselloLeft1() {
+    if (shapingCarosello1.scrollLeft > shapingCarosello1.scrollWidth / 2) {
+        shapingCarosello1.scrollLeft = 0;
+    } else {
+        shapingCarosello1.scrollLeft += 1;
+    }
+}
+
+
+
+const mediaQuery = window.matchMedia('(max-width: 1200px)');
+
+function handleMediaQuery(media) {
+    if (media.matches) {
+        setInterval(shapingScrollCaroselloLeft1, 20);
+        setInterval(shapingScrollCaroselloLeft2, 20);
+        console.log(`Media query attiva`);
+    } else {
+        console.log(`Media query non attiva`);
+        setInterval(shapingScrollCaroselloTop1, 20);
+        setInterval(shapingScrollCaroselloTop2, 30)
+    }
+}
+
+// Esegui la funzione di callback iniziale
+handleMediaQuery(mediaQuery);
+
+// Aggiungi l'ascoltatore per gestire eventuali cambiamenti nella media query
+mediaQuery.addEventListener('change', handleMediaQuery);
+const milion = document.querySelector(`.milion`)
+let a=0
+function dinamicNumbers() {
+    if (a<730) {
+        milion.innerText =`$ ${a}  Milion`
+        a++
+    }
+}
+setInterval(dinamicNumbers, 2); 
+const supply = document.querySelector(`.supply`)
+let b=0
+function dinamicNumbersa() {
+    if (b<= 2000) {
+        supply.innerText =` ${b} `
+        b+=500
+    }else{
+        clearInterval(clearSupplyset)
+        supply.innerText = ` 283,221,454`
+    }
+}
+const clearSupplyset=setInterval(dinamicNumbersa, 10); 
+const totalSupply = document.querySelector(`.total-supply`)
+let c=0
+function dinamicNumbersc() {
+    if (c< 500) {
+        totalSupply.innerText =` ${c} `
+        c++
+    }
+    else {
+        clearInterval(cleartotalset)
+        totalSupply.innerText = ` 394,615,093`
+    }
+}
+const cleartotalset= setInterval(dinamicNumbersc, .1); 
+const burn = document.querySelector(`.burn`)
+let d=0
+function dinamicNumbersd() {
+    if (d < 1144286783) {
+        burn.innerText =` ${d} `
+        d += 120287361
+    }
+    else {
+        clearInterval(clearBuernSet)
+        burn.innerText = `1,144,286,783`
+    }
+}
+const clearBuernSet = setInterval(dinamicNumbersd, 100); 
+//GAME & NFT RAPISARDI
+
+
+
 
 
 
