@@ -468,46 +468,67 @@ function dinamicNumbersd() {
 const clearBuernSet = setInterval(dinamicNumbersd, 100); 
 //GAME & NFT RAPISARDI
 
+const containerCarosellJoin = document.querySelector(".container-carosello-join");
+let buttonSwiper1 = document.querySelector("#button-1-swiper");
+let buttonSwiper2 = document.querySelector("#button-2-swiper");
+const joinCard1 = document.querySelector("#join-card-1");
+let innerjoin = true;
 
+function handleClick(event) {
+    if (event.target.id === "button-1-swiper" && innerjoin) {
+        innerCardJoin();
+        innerjoin = false;
+        buttonSwiper1.classList.remove("button-swiper-active");
+        buttonSwiper1.classList.add("button-swiper-disabled");
+        buttonSwiper2.classList.add("button-swiper-active");
+        buttonSwiper2.classList.remove("button-swiper-disabled");
+    } else if (event.target.id === "button-2-swiper" && !innerjoin) {
+        innerCardJoin1();
+        innerjoin = true;
+        buttonSwiper2.classList.remove("button-swiper-active");
+        buttonSwiper2.classList.add("button-swiper-disabled");
+        buttonSwiper1.classList.add("button-swiper-active");
+        buttonSwiper1.classList.remove("button-swiper-disabled");
+    }
+}
+function innerCardJoin() {
+    joinCard1.innerHTML = `
+        <p>Latest blog post</p>
+        <div class="container-img-swiper-join">
+            <img src="https://sgp1.digitaloceanspaces.com/strapi.space/813cb90861b09e0eae694797b56c3475.jpg" alt="">
+        </div>
+        <div class="buttons-swiper-slide">
+            <span><button id="button-1-swiper" id="btn-prev-swiper" class="button-swiper-active"></button></span>
+            <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
+        </div>`;
+    console.log("object");
+}
 
+function innerCardJoin1() {
+    joinCard1.innerHTML = `
+        <p id="margin-bottom-slide-p">Top Tweek of the week</p>
+        <div class="container-img-1-swiper-join">
+            <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/7186.png" alt="">
+        </div>
+        <p>PancakeSwap Everyone's Favourite D3X</p>
+        <div class="container-inner-slide-1-subtitle-p">
+            <p>@PancakeSwap</p>
+            <p>Dec 28</p>
+            <p>13K</p>
+            <p>179K</p>
+        </div>
+        <div class="container-pwithicon-slide-1">
+            <p>
+                🐰💙PancakeSwap Fam, the moment is here!
+                🥞Proposal to reduce the max supply of $CAKE from 750M to 450M!
+            </p>
+        </div>
+        <a href="#">Web Link </a>
+        <div class="buttons-swiper-slide">
+            <span><button id="button-1-swiper" class="button-swiper-active"></button></span>
+            <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
+        </div>`;
+    console.log(`ciao`);
+}
 
-
-
-
-//SEZIONE UNDEFINED 
-const containerSlideSwiper = document.querySelectorAll('.swiper-slide-join');
-let currentIndexSlide = 0;
-const btnSwiperPrev = document.querySelector('#button-1-swiper');
-const btnSwiperNext = document.querySelector('#button-2-swiper');
-const btnSwiperPrev2 = document.querySelector('#btn-prev-swiper')
-
-function showSwiperSlide(index) {
-    containerSlideSwiper.forEach(slide => {
-      slide.style.display = 'none';
-    });
-  
-    containerSlideSwiper[index].style.display = 'block';
-  }
-
-  function nextSwiperSlide() {
-    currentIndexSlide = (currentIndexSlide + 1) % containerSlideSwiper.length;
-    showSwiperSlide(currentIndexSlide);
-  }
-
-  function previousSlide() {
-    currentIndexSlide = (currentIndexSlide - 1 + containerSlideSwiper.length) % containerSlideSwiper.length;
-    showSwiperSlide(currentIndexSlide);
-  }
-  
-  showSwiperSlide(currentIndexSlide);
-
-  btnSwiperNext.addEventListener('click',nextSwiperSlide)
-  btnSwiperPrev2.addEventListener('click',previousSlide)
-
-
-
-
-
-
-
-    
+containerCarosellJoin.addEventListener("click", handleClick);
