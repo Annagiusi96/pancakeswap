@@ -398,19 +398,19 @@ function shapingScrollCaroselloLeft1() {
     }
 }
 
-
-
 const mediaQuery = window.matchMedia('(max-width: 1200px)');
 
 function handleMediaQuery(media) {
     if (media.matches) {
         setInterval(shapingScrollCaroselloLeft1, 20);
         setInterval(shapingScrollCaroselloLeft2, 20);
+        
         console.log(`Media query attiva`);
     } else {
         console.log(`Media query non attiva`);
         setInterval(shapingScrollCaroselloTop1, 20);
         setInterval(shapingScrollCaroselloTop2, 30)
+        
     }
 }
 

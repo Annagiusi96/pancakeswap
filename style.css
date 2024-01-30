@@ -1111,8 +1111,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .full-partner-carousel {
-    width: 200px;
-    height: 600px;
     border: 1px solid black;
     color: var(--colors-text);
     line-height: 1.5;
@@ -1233,11 +1231,13 @@ align-items: center;
     .img-monetina {
         width: 100%;
         height: auto;
+        transform: scale(70%);
     }
 
     .canvasMonetina {
         transform: rotate(90deg);
-        width: 100vw;
+        
+
     }
 
     .shaping-infinite-scrolling-container1,
@@ -1286,6 +1286,9 @@ align-items: center;
         max-width:fit-content;
         flex-wrap: wrap;
     }
+        .container-dinamic-num{
+            flex-wrap: wrap;
+        }
 
 }
 .milion{
@@ -1306,6 +1309,7 @@ color: white;
     align-items: center;
     justify-content: space-around;
     height: 150px;
+    margin-bottom: 150px;
 }
 .cake-figure{
     width: 200px;
