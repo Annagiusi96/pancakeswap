@@ -1,9 +1,10 @@
 #default-carousel{
-    background-color: rebeccapurple;
-    max-width: 1152px;
+    background-color: transparent;
     /* margin: 20px auto; */
-    padding: 16px;
     border-radius: 33px;
+    width: 1110px;
+    height: 194px;
+    z-index: 1;
 }
 
 .container-carosello-jumbotron{
@@ -11,12 +12,10 @@
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    
 }
 
-.container-1-carosello-j{
-    display: flex;
-    justify-content: center;
-}
+
 /* #default-carousel {
     background-color: transparent !important;
 } */
@@ -25,4 +24,103 @@
     #default-carousel{
         height: 232px;
     }
+}
+
+/* primo slide */
+.container-1-carosello-j{
+    background: url(https://pancakeswap.finance/_next/static/media/galxe-traverse-bg.fcab2d26.png);
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+
+}
+
+
+.item1-top-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.item1-top-bunny{
+    height: 20px;
+}
+
+.item1-top-line{
+    height: 20px;
+    width: 1px;
+    background-color: white;
+}
+
+.galxeLogo{
+    height: 16px; 
+    
+}
+
+.item1-first-text{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    filter: drop-shadow(0 0.1rem rgb(246, 169, 3));
+    background: linear-gradient(166.02deg, rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%) text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    font-weight: 1000;
+    padding-top: 10px;
+}
+
+.item1-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.item1-btn{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 40px;
+    font-size: 20px;
+    padding: 0px 8px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);    
+}
+
+.item1-btn > div{
+    color: var(--colors-text);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+.item1-btn > svg{
+    align-self: center;
+    fill: var(--colors-white);
+    color: var(--colors-white);
+    flex-shrink: 0;
+}
+
+.item1-galaxy-travel{
+    position: relative;
+    top: -58px;
+    left: -115px;
+    z-index: 2;
 }
