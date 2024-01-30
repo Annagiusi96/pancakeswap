@@ -886,7 +886,7 @@ a {
 }
 
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: 1112px){
     .shaping-the-future-text{
         display: flex;
         justify-content: center;
