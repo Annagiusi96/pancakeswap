@@ -4,7 +4,7 @@ const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-con
 const shapingElements = document.querySelectorAll('.shaping-scroll-element')
 
 shapingElements.forEach(e => {
-    console.log(e)
+    
     const cloneNode = e.cloneNode(true);
     shapingCarosello.appendChild(cloneNode);
 })
@@ -528,7 +528,48 @@ function innerCardJoin1() {
             <span><button id="button-1-swiper" class="button-swiper-active"></button></span>
             <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
         </div>`;
-    console.log(`ciao`);
+    
 }
 
 containerCarosellJoin.addEventListener("click", handleClick);
+
+
+const scrollBtn = document.querySelector(`.scroll-btn`)
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+
+    const scrollBtn = document.querySelector('.scroll-btn');
+
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (scrollTop > 50) {
+            scrollBtn.style.display = 'block';
+        } else {
+            scrollBtn.style.display = 'none';
+        }
+    }
+
+    scrollBtn.addEventListener('click', () => {
+        scrollToTop();
+    });
+
+    function scrollToTop() {
+        const scrollDuration = 300;
+        const scrollStep = -window.scrollY / (scrollDuration / 15);
+
+        const scrollInterval = setInterval(function () {
+            if (window.scrollY !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 15);
+    }
+});
