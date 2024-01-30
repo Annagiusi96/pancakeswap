@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--colors-background);
+}
+
+:root {
+    --fonts-normal: "Kanit",sans-serif;
+    --fonts-mono: SFMono,ui-monospace,monospace;
+    --space-0px: 0px;
+    --space-1rem: 1rem;
+    --space-1px: 1px;
+    --space-2px: 2px;
+    --space-6px: 6px;
+    --space-4px: 4px;
+    --space-8px: 8px;
+    --space-12px: 12px;
+    --space-14px: 14px;
+    --space-16px: 16px;
+    --space-20px: 20px;
+    --space-24px: 24px;
+    --space-32px: 32px;
+    --space-48px: 48px;
+    --space-56px: 56px;
+    --space-64px: 64px;
+    --borderWidths-0: 0px;
+    --borderWidths-1: 1px;
+    --borderWidths-2: 2px;
+    --radii-0: 0px;
+    --radii-8px: 8px;
+    --radii-12px: 12px;
+    --radii-20px: 20px;
+    --radii-32px: 32px;
+    --radii-small: 4px;
+    --radii-default: 16px;
+    --radii-card: 24px;
+    --radii-circle: 50%;
+    --fontSizes-10px: 10px;
+    --fontSizes-12px: 12px;
+    --fontSizes-16px: 16px;
+    --fontSizes-14px: 14px;
+    --fontSizes-20px: 20px;
+    --fontSizes-40px: 40px;
+    --shadows-level1: 0px 2px 12px -8px rgba(25,19,38,.1),0px 1px 1px rgba(25,19,38,.05);
+    --shadows-active: 0px 0px 0px 1px #0098a1,0px 0px 4px 8px rgba(31,199,212,.4);
+    --shadows-success: 0px 0px 0px 1px #31d0aa,0px 0px 0px 4px rgba(49,208,170,.2);
+    --shadows-warning: 0px 0px 0px 1px #d67e0a,0px 0px 0px 4px rgba(214,126,10,.2);
+    --shadows-danger: 0px 0px 0px 1px #ed4b9e,0px 0px 0px 4px rgba(237,75,158,.2);
+    --shadows-focus: 0px 0px 0px 1px #7645d9,0px 0px 0px 4px rgba(118,69,217,.6);
+    --shadows-inset: inset 0px 2px 2px -1px rgba(74,74,104,.1);
+    --shadows-tooltip: 0px 0px 2px rgba(0,0,0,.2),0px 4px 12px -8px rgba(14,14,44,.1)
+}
+
+[data-theme=light] {
+    --colors-white: #fff;
+    --colors-failure: #ed4b9e;
+    --colors-failure33: #ed4b9e33;
+    --colors-primary: #1fc7d4;
+    --colors-primary0f: #1fc7d40f;
+    --colors-primary3D: #1fc7d43d;
+    --colors-primaryBright: #53dee9;
+    --colors-primaryDark: #0098a1;
+    --colors-success: #31d0aa;
+    --colors-success19: #31d0aa19;
+    --colors-warning: #ffb237;
+    --colors-warning2D: #ed4b9e2d;
+    --colors-warning33: #ed4b9e33;
+    --colors-binance: #f0b90b;
+    --colors-overlay: #452a7a;
+    --colors-gold: #ffc700;
+    --colors-silver: #b2b2b2;
+    --colors-bronze: #e7974d;
+    --colors-yellow: #d67e0a;
+    --colors-secondary: #7645d9;
+    --colors-secondary80: #7645d980;
+    --colors-background: #faf9fa;
+    --colors-backgroundDisabled: #e9eaeb;
+    --colors-backgroundAlt: #fff;
+    --colors-backgroundAlt2: hsla(0,0%,100%,.7);
+    --colors-cardBorder: #e7e3eb;
+    --colors-contrast: #191326;
+    --colors-dropdown: #f6f6f6;
+    --colors-dropdownDeep: #eee;
+    --colors-invertedContrast: #fff;
+    --colors-input: #eeeaf4;
+    --colors-inputSecondary: #d7caec;
+    --colors-tertiary: #eff4f5;
+    --colors-text: #280d5f;
+    --colors-text99: #280d5f99;
+    --colors-textDisabled: #bdc2c4;
+    --colors-textSubtle: #7a6eaa;
+    --colors-disabled: #e9eaeb;
+    --colors-gradientBubblegum: linear-gradient(139.73deg,#e5fdff,#f3efff);
+    --colors-gradientInverseBubblegum: linear-gradient(139.73deg,#f3efff,#e5fdff);
+    --colors-gradientCardHeader: linear-gradient(111.68deg,#f2ecf2,#e8f2f6);
+    --colors-gradientBlue: linear-gradient(180deg,#a7e8f1,#94e1f2);
+    --colors-gradientViolet: linear-gradient(180deg,#e2c9fb,#cdb8fa);
+    --colors-gradientVioletAlt: linear-gradient(180deg,#cbd7ef,#9a9fd0);
+    --colors-gradientGold: linear-gradient(180deg,#ffd800,#fdab32);
+    --colors-gradientBold: linear-gradient(#53dee9,#7645d9)
+}
+
+[data-theme=dark] {
+    --colors-white: #fff;
+    --colors-failure: #ed4b9e;
+    --colors-failure33: #ed4b9e33;
+    --colors-primary: #1fc7d4;
+    --colors-primary0f: #1fc7d40f;
+    --colors-primary3D: #1fc7d43d;
+    --colors-primaryBright: #53dee9;
+    --colors-primaryDark: #0098a1;
+    --colors-success: #31d0aa;
+    --colors-success19: #31d0aa19;
+    --colors-warning: #ffb237;
+    --colors-warning2D: #ed4b9e2d;
+    --colors-warning33: #ed4b9e33;
+    --colors-binance: #f0b90b;
+    --colors-overlay: #452a7a;
+    --colors-gold: #ffc700;
+    --colors-silver: #b2b2b2;
+    --colors-bronze: #e7974d;
+    --colors-yellow: #d67e0a;
+    --colors-secondary: #a881fc;                          
+    --colors-secondary80: #a881fc80;
+    --colors-background: #08060b;
+    --colors-backgroundDisabled: #3c3742;
+    --colors-backgroundAlt: #27262c;
+    --colors-backgroundAlt2: rgba(39,38,44,.7);
+    --colors-cardBorder: #383241;
+    --colors-contrast: #fff;
+    --colors-dropdown: #1e1d20;
+    --colors-dropdownDeep: #100c18;
+    --colors-invertedContrast: #191326;
+    --colors-input: #372f47;
+    --colors-inputSecondary: #262130;
+    --colors-tertiary: #353547;
+    --colors-text: #f4eeff;
+    --colors-text99: #f4eeff99;
+    --colors-textDisabled: #666171;
+    --colors-textSubtle: #b8add2;
+    --colors-disabled: #524b63;
+    --colors-gradientBubblegum: linear-gradient(139.73deg,#313d5c,#3d2a54);
+    --colors-gradientInverseBubblegum: linear-gradient(139.73deg,#3d2a54,#313d5c);
+    --colors-gradientCardHeader: linear-gradient(166.77deg,#3b4155,#3a3045);
+    --colors-gradientBlue: linear-gradient(180deg,#00707f,#19778c);
+    --colors-gradientViolet: linear-gradient(180deg,#6c4999,#6d4db2);
+    --colors-gradientVioletAlt: linear-gradient(180deg,#434575,#66578d);
+    --colors-gradientGold: linear-gradient(180deg,#ffd800,#fdab32);
+    --colors-gradientBold: linear-gradient(#53dee9,#9a6aff)
+}
+
+
