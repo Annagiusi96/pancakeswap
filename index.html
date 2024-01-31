@@ -317,7 +317,7 @@
 
         <!-- Alex INIZIO -->
         <section class="container-carosello-jumbotron">
-            <div id="default-carousel" class="relative w-full" data-carousel="static">
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
                 <div class="relative h-56 overflow-hidden rounded-lg md:h-96 bg-trasparent">
                     <!-- Item 1 -->
@@ -419,13 +419,26 @@
                     </div>
                     <!-- Item 5 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <h3>slide 5</h3>
-                        <img src="/docs/images/carousel/carousel-5.svg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <div class="container-5-carosello-j">
+                            <div class="item5-text-left">
+                                <div class="item5-top-logo">
+                                    <p>Perpetual Futures</p>
+                                </div>
+                                <div class="item5-first-text">
+                                    <p>UP TO 1001x LEVERAGE</p>
+                                </div>
+                                <button class="item5-first-btn">
+                                    <div>Trade Now ➜</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item5-img-container">
+                            <img class='item5-perpetual' src="src_img_slider/perpetual.webp" alt="fly-coin" width="400px">
+                        </div> 
                     </div>
                 </div>
                 <!-- Slider indicators -->
-                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <div id='slideBtn' class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
                         data-carousel-slide-to="0"></button>
                     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
