@@ -27,7 +27,7 @@
     }
 } */
 
-/* primo slide */
+/* item 1 */
 .container-1-carosello-j{
     background: url(https://pancakeswap.finance/_next/static/media/galxe-traverse-bg.fcab2d26.png);
     background-size:contain;
@@ -38,7 +38,6 @@
     padding:20px;
     overflow: visible;
     z-index: 1;
-
 }
 
 
@@ -46,7 +45,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-
 }
 
 .item1-top-bunny{
@@ -136,5 +134,113 @@
     
     to {
         top: -50px;
+    }
+}
+
+/* item 2 */
+
+.container-2-carosello-j{
+    background: rgb(11,206,252);
+    background: linear-gradient(0deg, rgba(11,206,252,1) 0%, rgba(169,232,247,1) 100%);
+    border-radius: 30px;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+.item2-top-bunny{
+    height: 20px;
+}
+
+.item2-first-text{
+    font-size: 20px;
+    line-height: 150%;
+    color: rgb(238, 172, 65);
+    text-shadow: -1px 0 #8c03f5, 0 3px #8c03f5, 1px 0 #8c03f5, 0 -1px #8c03f5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    
+}
+
+.item2-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.item2-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+    background-color: rgb(228, 239, 251);
+    color: rgb(11,206,252);
+}
+
+.item2-bunny-social{
+    overflow: visible;
+}
+
+.bunny-back{
+    position: relative;
+    bottom: -37px;
+    left: 20px;
+    z-index: 1;
+    border-radius: 29px;
+}
+
+.bunny-star{
+    position: relative;
+    top: -89px;
+    left: -95px;
+    animation: 1.5s infinite alternate star;
+}
+
+.bunny-bunny{
+    position: relative;
+    top: -183px;
+    left: 224px;
+}
+
+.bunny-like{
+    position: relative;
+    top: -354px;
+    left: 395px;
+    animation: 1s infinite alternate like;
+}
+
+@keyframes like{
+    from {
+        top: -354px;
+    }
+    
+    to {
+        top: -360px;
+    }
+}
+
+.bunny-whatsapp{
+    position: relative;
+    top: -444px;
+    left: 135px;
+    animation: 1s infinite alternate whatsapp;
+}
+
+@keyframes whatsapp{
+    from {
+        top: -444px;
+    }
+    
+    to {
+        top: -450px;
     }
 }
