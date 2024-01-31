@@ -401,24 +401,19 @@ display:block;
     display: none;
 }
 
-@media screen and (min-width:1080px){ 
-.bnb{
-    display: block;
-} 
-} 
-
-@media  screen and(max-width:960px) {
-    .bnb{
-        display: none;
-
-    }
-    .bnb-media{
-        background-color:red;
-        display: flex;
-    }
+@media screen and (max-width:960px) {
+    .bnb {
+            display: none;
+    
+        }
+    
+        .bnb-media {
+            display: flex;
+        }
 }
-@media screen and(max-width:576px) {
-    .bnb-media-{
+
+@media screen and (max-width:576px) {
+    .bnb-media{
         display: none;
     }
 }
