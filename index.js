@@ -497,6 +497,7 @@ function innerCardJoin() {
         <div class="container-img-swiper-join">
             <img src="https://sgp1.digitaloceanspaces.com/strapi.space/813cb90861b09e0eae694797b56c3475.jpg" alt="">
         </div>
+        <p style="font-size: 14px;"> Boost Your Trading Game: Join Our Top 100 Traders Rewards Challenge for Exclusive 3% Trading Fee Rebate! </p>
         <div class="buttons-swiper-slide">
             <span><button id="button-1-swiper" id="btn-prev-swiper" class="button-swiper-active"></button></span>
             <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
@@ -530,6 +531,17 @@ function innerCardJoin1() {
         </div>`;
     
 }
+let boolSlide = true;
+setInterval(()=>{
+    if(boolSlide){
+        innerCardJoin();
+        boolSlide = false;
+    }else{
+        innerCardJoin1();
+        boolSlide = true
+    }
+},3000)
+
 
 containerCarosellJoin.addEventListener("click", handleClick);
 

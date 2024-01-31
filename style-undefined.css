@@ -223,6 +223,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: fit-content;
+    transition: all 0.5s ease-in-out;
+    /* gap: 10px; */
 }
 
 #margin-bottom-slide-p{
@@ -254,6 +256,8 @@
 
 .container-img-1-swiper-join img{
     width: 50px;
+    margin: 10px 0;
+    margin: 10px 0;
 }
 
 .container-img-swiper-join img{
