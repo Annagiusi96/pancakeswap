@@ -533,6 +533,9 @@ function innerCardJoin1() {
     
 }
 
+//carosello cardfeatured chiara
+
+
 setInterval(()=>{
     if(boolSlide){
         innerCardJoin();
@@ -586,3 +589,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 15);
     }
 });
+
