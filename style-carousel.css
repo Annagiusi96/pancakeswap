@@ -244,3 +244,96 @@
         top: -450px;
     }
 }
+
+/* item 3 */
+
+.container-3-carosello-j{
+    background: url(src_img_slider/vecake-bg.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.item3-top-bunny{
+    height: 20px;
+}
+
+.item3-first-text{
+    font-size: 20px;
+    line-height: 150%;
+    color: rgb(238, 172, 65);
+    text-shadow: -1px 0 #8c03f5, 0 3px #8c03f5, 1px 0 #8c03f5, 0 -1px #8c03f5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    
+}
+
+.item3-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item3-second-text span{
+    color: rgb(118, 69, 217)    
+}
+
+.item3-first-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 15px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+    margin-right: 10px;
+}
+
+.item3-second-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    background-color: rgb(228, 239, 251);
+    color: rgb(11,206,252);
+}
+
+.item3-bunny-coin{
+    position: relative;
+    top: -58px;
+    left: -129px;
+}
+
+.item3-coin{
+    position: relative;
+    top: -227px;
+    left: -272px;
+    animation: 1s infinite alternate flyCoin;
+}
+
+@keyframes flyCoin{
+    from {
+        top: -227px;
+    }
+    
+    to {
+        top: -240px;
+    }
+}
