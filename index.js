@@ -490,7 +490,8 @@ function handleClick(event) {
         buttonSwiper1.classList.add("button-swiper-active");
         buttonSwiper1.classList.remove("button-swiper-disabled");
     }
-}
+} 
+let boolSlide = true;
 function innerCardJoin() {
     joinCard1.innerHTML = `
         <p>Latest blog post</p>
@@ -531,7 +532,7 @@ function innerCardJoin1() {
         </div>`;
     
 }
-let boolSlide = true;
+
 setInterval(()=>{
     if(boolSlide){
         innerCardJoin();
