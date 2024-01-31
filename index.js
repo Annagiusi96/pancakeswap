@@ -282,3 +282,4 @@ function verticalLineDrawrightGiu() {
         clearInterval(intervalIDDownRight)
     }
 }
+//carosello cardfeatured chiara
