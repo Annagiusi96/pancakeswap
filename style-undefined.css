@@ -396,3 +396,9 @@
     left: 200px;
     position: absolute;
 }
+
+@media screen and (max-width: 650px) {
+    .img-ring-right{
+        display: none;
+    }
+}
