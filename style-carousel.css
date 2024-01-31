@@ -28,6 +28,7 @@
 } */
 
 /* item 1 */
+
 .container-1-carosello-j{
     background: url(https://pancakeswap.finance/_next/static/media/galxe-traverse-bg.fcab2d26.png);
     background-size:contain;
@@ -336,4 +337,92 @@
     to {
         top: -240px;
     }
+}
+
+/* item 4 */
+
+.container-4-carosello-j{
+    background: url(src_img_slider/game-desktop-bg.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.item4-top-bunny{
+    height: 20px;
+}
+
+.item4-first-text{
+    font-size: 22px;
+    line-height: 150%;
+    color: rgb(248, 228, 8);
+    text-shadow: -1px 0 #7dd501, 0 1px #7dd501, 1px 0 #7dd501, 0 -1px #7dd501;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 1000;
+    padding-top: 10px;
+    letter-spacing: 1px;    
+}
+
+.item4-second-text{
+    display: flex;
+    align-items: center;
+    color: rgb(52, 251, 166);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.item4-second-text span{
+    color: rgb(241, 226, 53);
+    margin-left: 2px;
+}
+
+.item4-btn{
+    display: flex;
+    align-items: center;
+    color: rgb(5, 255, 195);
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.item4-btn > svg{
+    align-self: center;
+    fill: rgb(5, 255, 195);
+    color: rgb(5, 255, 195);
+    flex-shrink: 0;
+}
+
+.item4-cube{
+    position: relative;
+    top: -210px;
+    left: -188px;
+    animation: 1s infinite alternate cube;
+}
+
+@keyframes cube{
+    from {
+        top: -210;
+        left: -188px;
+    }
+    
+    to {
+        top: -200px;
+        left: -195px;
+    }
+}
+
+.item4-gaming-bunny{
+    position: relative;
+    top: -20px;
+    left: -58px;
 }
