@@ -1,5 +1,3 @@
-# pancakeswap
-# sviluppare sito in dark mode, utiizzando SOLO i colori specificati nella root ([data-theme=dark] CSS RIGA 109)
 <h1 align="center">Hi 👋, We Are Develhope Student</h1>
 <h3 align="center">We are passionate frontend developer from Italy this is our Dev Team</h3>
 

@@ -1,0 +1,493 @@
+#default-carousel{
+    background-color: transparent;
+    /* margin: 20px auto; */
+    border-radius: 33px;
+    max-width: 1110px;
+    height: 194px;
+    
+}
+
+.container-carosello-jumbotron{
+    background-color: var(--color-background-alex);
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    overflow: hidden;
+    
+}
+
+
+/* #default-carousel {
+    background-color: transparent !important;
+} */
+
+/* @media screen and (min-width: 968px){
+    #default-carousel{
+        height: 232px;
+    }
+} */
+
+/* item 1 */
+
+.container-1-carosello-j{
+    background: url(https://pancakeswap.finance/_next/static/media/galxe-traverse-bg.fcab2d26.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+}
+
+
+.item1-top-logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item1-top-bunny{
+    height: 20px;
+}
+
+.item1-top-line{
+    height: 20px;
+    width: 1px;
+    background-color: white;
+}
+
+.galxeLogo{
+    height: 16px; 
+    
+}
+
+.item1-first-text{
+    font-size: 22px;
+    line-height: 150%;
+    color: rgb(255, 178, 55);
+    text-shadow: -1px 0 #d58701, 0 1px #d58701, 1px 0 #d58701, 0 -1px #d58701;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 1000;
+    padding-top: 10px;
+    
+}
+
+.item1-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.item1-btn{
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 40px;
+    font-size: 20px;
+    padding: 0px 8px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);    
+}
+
+.item1-btn > div{
+    color: var(--colors-text);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-right: 4px;
+    font-size: 12px;
+}
+
+.item1-btn > svg{
+    align-self: center;
+    fill: var(--colors-white);
+    color: var(--colors-white);
+    flex-shrink: 0;
+}
+
+.item1-galaxy-travel{
+    position: relative;
+    top: -33px;
+    left: -122px;
+    animation: 1.5s infinite alternate slidein;
+}
+
+@keyframes slidein{
+    from {
+        top: -33px;
+    }
+    
+    to {
+        top: -50px;
+    }
+}
+
+/* item 2 */
+
+.container-2-carosello-j{
+    background: rgb(11,206,252);
+    background: linear-gradient(0deg, rgba(11,206,252,1) 0%, rgba(169,232,247,1) 100%);
+    border-radius: 30px;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+.item2-top-bunny{
+    height: 20px;
+}
+
+.item2-first-text{
+    font-size: 20px;
+    line-height: 150%;
+    color: rgb(238, 172, 65);
+    text-shadow: -1px 0 #8c03f5, 0 3px #8c03f5, 1px 0 #8c03f5, 0 -1px #8c03f5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    
+}
+
+.item2-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.item2-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+    background-color: rgb(228, 239, 251);
+    color: rgb(11,206,252);
+}
+
+.item2-bunny-social{
+    overflow: visible;
+}
+
+.bunny-back{
+    position: relative;
+    bottom: -37px;
+    left: 20px;
+    z-index: 1;
+    border-radius: 29px;
+}
+
+.bunny-star{
+    position: relative;
+    top: -89px;
+    left: -95px;
+    animation: 1.5s infinite alternate star;
+}
+
+.bunny-bunny{
+    position: relative;
+    top: -183px;
+    left: 224px;
+}
+
+.bunny-like{
+    position: relative;
+    top: -354px;
+    left: 395px;
+    animation: 1s infinite alternate like;
+}
+
+@keyframes like{
+    from {
+        top: -354px;
+    }
+    
+    to {
+        top: -360px;
+    }
+}
+
+.bunny-whatsapp{
+    position: relative;
+    top: -444px;
+    left: 135px;
+    animation: 1s infinite alternate whatsapp;
+}
+
+@keyframes whatsapp{
+    from {
+        top: -444px;
+    }
+    
+    to {
+        top: -450px;
+    }
+}
+
+/* item 3 */
+
+.container-3-carosello-j{
+    background: url(src_img_slider/vecake-bg.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.item3-top-bunny{
+    height: 20px;
+}
+
+.item3-first-text{
+    font-size: 20px;
+    line-height: 150%;
+    color: rgb(238, 172, 65);
+    text-shadow: -1px 0 #8c03f5, 0 3px #8c03f5, 1px 0 #8c03f5, 0 -1px #8c03f5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    padding-top: 10px;
+    
+}
+
+.item3-second-text{
+    color: rgb(40, 13, 95);
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item3-second-text span{
+    color: rgb(118, 69, 217)    
+}
+
+.item3-first-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 15px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+    margin-right: 10px;
+}
+
+.item3-second-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 20px;
+    background-color: rgb(228, 239, 251);
+    color: rgb(11,206,252);
+}
+
+.item3-bunny-coin{
+    position: relative;
+    top: -58px;
+    left: -129px;
+}
+
+.item3-coin{
+    position: relative;
+    top: -227px;
+    left: -272px;
+    animation: 1s infinite alternate flyCoin;
+}
+
+@keyframes flyCoin{
+    from {
+        top: -227px;
+    }
+    
+    to {
+        top: -240px;
+    }
+}
+
+/* item 4 */
+
+.container-4-carosello-j{
+    background: url(src_img_slider/game-desktop-bg.webp);
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.item4-top-bunny{
+    height: 20px;
+}
+
+.item4-first-text{
+    font-size: 22px;
+    line-height: 150%;
+    color: rgb(248, 228, 8);
+    text-shadow: -1px 0 #7dd501, 0 1px #7dd501, 1px 0 #7dd501, 0 -1px #7dd501;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: 1000;
+    padding-top: 10px;
+    letter-spacing: 1px;    
+}
+
+.item4-second-text{
+    display: flex;
+    align-items: center;
+    color: rgb(52, 251, 166);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.item4-second-text span{
+    color: rgb(241, 226, 53);
+    margin-left: 2px;
+}
+
+.item4-btn{
+    display: flex;
+    align-items: center;
+    color: rgb(5, 255, 195);
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.item4-btn > svg{
+    align-self: center;
+    fill: rgb(5, 255, 195);
+    color: rgb(5, 255, 195);
+    flex-shrink: 0;
+}
+
+.item4-cube{
+    position: relative;
+    top: -210px;
+    left: -188px;
+    animation: 1s infinite alternate cube;
+}
+
+@keyframes cube{
+    from {
+        top: -210;
+        left: -188px;
+    }
+    
+    to {
+        top: -200px;
+        left: -195px;
+    }
+}
+
+.item4-gaming-bunny{
+    position: relative;
+    top: -20px;
+    left: -58px;
+}
+
+/* item 5 */
+
+.container-5-carosello-j{
+    background: rgb(53,1,87);
+    background: linear-gradient(0deg, rgba(53,1,87,1) 0%, rgba(154,105,250,1) 100%);
+    border-radius: 30px;
+    height: 189px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+}
+
+.item5-top-logo{
+    font-size: 16px;
+    color: rgb(247, 169, 13);
+    text-shadow: -1px 0 #8f6703, 0 1px #8f6703, 1px 0 #8f6703, 0 -1px #8f6703;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}
+
+.item5-first-text{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+.item5-first-btn{
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 48px;
+    letter-spacing: 1px;
+    padding: 0px 15px;
+    background-color: var(--colors-primary);
+    color: var(--colors-invertedContrast);
+    margin-top: 10px;
+}
+
+.item5-perpetual{
+    position: relative;
+    top: -238px;
+    left: 714px;
+}
+
+#slideBtn button{
+    width: 30px;
+    margin: 0px;
+    border-radius: 0;
+}
+
+#slideBtn button:nth-child(1){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#slideBtn button:nth-child(5){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
