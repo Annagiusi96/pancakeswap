@@ -1353,3 +1353,17 @@ color: white;
       transition: width 400ms ease;
       width: 0;
   }
+  .scroll-btn{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    background-color: aqua;
+    border-radius: 15px;
+    color: var(--colors-invertedContrast);
+    z-index: 10000000;
+    right: 50px;
+    top: 500px;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: all 1s ease-in-out;
+  }
