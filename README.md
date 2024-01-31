@@ -28,21 +28,21 @@
 <p> A sinistra, dopo il logo e la scritta di PancakeSwap, sono presenti cinque menù a discesa o dropdown: Trade, Earn, Game, NFT e •••, con le rispettive opzioni. A destra, passando il mouse sull’icona globo è possibile scegliere tra le varie lingue che si aprono in dropdown (anche in fondo alla pagina nel footer). A seguire l’icona delle impostazioni, e BNB Chain  con l’elenco di varie criptovalute. </p>
 
 <img  align="center"  width="700" src="images/Trade.png">
-<p>Passando il mouse sulle card Trade, Earn e Game & NFT, le immagini cambiano di colore e il link si illumina. Così è possibile cliccarlo</p>
+<p>Passando il mouse sulle card Trade, Earn e Game & NFT, le immagini cambiano di colore e il link si illumina, diventando cliccabile</p>
 
 <img  align="center"  width="700" src="images/JoinOurC.png">
 <p>Nella sezione "Join Our Community" è possibile cliccare sui bottoni delle mini card per scorrere tra le due opzioni</p>
 
 <img  align="center"  width="400" src="images/screenshotCard.png"></img>
-<p>Cliccando sulle frecce posizionate a destra e sinistra delle card è possibile farle scorrere in un verso o in un altro.</p>
+<p>Cliccando sulle frecce ai lati del carosello contenente le card, queste scorreranno in un verso o in un altro.</p>
 </br>
 <div display="flex">
-<img src="images/darkmode.png"> Nella parte inferiore del sito è presente il bottone che cambia il tema del sito da darkmode a light mode e viceversa.</img>
+<img src="images/darkmode.png"> Nella parte inferiore del sito è presente il bottone che cambia il tema da darkmode a light mode e viceversa.</img>
 </div>
 </br>
 <div >
 <img width="70" align="right" src="images/BtnUp.png"> 
-<p align="left"> A destra si trova il tasto di scorrimento verso l’alto, che riporta la pagina alla parte superiore del sito. </p> 
+<p align="left"> A destra si trova il tasto di scorrimento verso l’alto, che riporta la pagina alla parte superiore. </p> 
 </div>
 </br>
 </br>
