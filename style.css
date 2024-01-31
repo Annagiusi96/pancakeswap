@@ -576,24 +576,6 @@ a {
     align-items: center;
 }
 
-/* .animation{
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    animation: primary 8s linear infinite;
-} */
-
-/* @keyframes primary {
-    from {
-      left: 0%;
-    }
-    to {
-      left: -100%;
-    }
-  } */
-
 .shaping-scroll-element p,
 .shaping-scroll-element1 p,
 .shaping-scroll-element2 p {
@@ -646,7 +628,7 @@ a {
 }
 
 #scroll-element-4-background img {
-    width: 30px;
+    width: 10px;
     opacity: 0.5;
 }
 
