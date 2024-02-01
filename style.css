@@ -457,6 +457,13 @@ button.container-list-2 {
     display: none;
 }
 
+@media screen and (max-width: 1400px ) {
+    .container-list-bnb{
+        transform: translate3d(1500.31px, 54.384600000000006px, 0px);
+    }
+    
+}
+
 .nav-btn-image:hover .container-list-bnb {
     display: block !important;
 }
