@@ -482,10 +482,13 @@
     left: 714px;
 }
 
+/* bottoni */
+
 #slideBtn button{
-    width: 30px;
+    width: 25px;
     margin: 0px;
     border-radius: 0;
+    height: 10px;
 }
 
 #slideBtn button:nth-child(1){
