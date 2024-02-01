@@ -587,3 +587,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+const imageList = document.querySelector(".cardtot-container");
+const slideButtons = document.querySelectorAll(".button-slider");
+const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+    // Handle scrollbar thumb drag
+
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            
+        });
+    });
+
