@@ -179,7 +179,6 @@
 @media screen and (max-width: 660px) {
     
     .everyone-Favorite-DEX{
-        background-color: #21193a;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
