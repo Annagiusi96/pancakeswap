@@ -1,3 +1,9 @@
+@media screen and (max-width: 660px){
+    #default-carousel{
+        display: none;
+    }
+}
+
 #default-carousel{
     background-color: transparent;
     /* margin: 20px auto; */
@@ -476,10 +482,13 @@
     left: 714px;
 }
 
+/* bottoni */
+
 #slideBtn button{
-    width: 30px;
+    width: 25px;
     margin: 0px;
     border-radius: 0;
+    height: 10px;
 }
 
 #slideBtn button:nth-child(1){

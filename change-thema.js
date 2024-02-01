@@ -9,6 +9,7 @@ const pathOndaJoin = document.querySelector('.path-onda-join')
 const indicatorDarkmode = document.querySelector('.footerDarkModeIndicator')
 const SvgDM = document.querySelector('.footerSvg1')
 const SvgDM2 = document.querySelector('.footerSvg2')
+const backgroundAlex = document.getElementById('background-alex-hero')
 
 
 btnChangeTheme.addEventListener('click', () => {
@@ -69,6 +70,7 @@ btnChangeTheme.addEventListener('click', () => {
         joinContainerCentral.classList.remove('join-container-central-backg-dark')
         pathOndaJoin.classList.add('path-onda-join-light')
         pathOndaJoin.classList.remove('path-onda-join-dark')
+        backgroundAlex.innerHTML = ''
     }
     if (value === 'light') {
         thema.setAttribute('data-theme', 'dark')
@@ -82,8 +84,31 @@ btnChangeTheme.addEventListener('click', () => {
         joinContainerCentral.classList.add('join-container-central-backg-dark')
         pathOndaJoin.classList.add('path-onda-join-dark')
         pathOndaJoin.classList.remove('path-onda-join-light')
-
+        backgroundAlex.innerHTML = `
+                        <svg id='background-alex-hero' viewBox="0 0 1660 339"
+                            class="sc-grXZZQ ktVOoD slide-svg-dark" width="100%"
+                            color="text"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="path-back-alex"
+                                d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
+                                fill="url(#paint0_linear_dark)"></path>
+                            <defs>
+                                <lineargradient id="paint0_linear_dark" x1="830"
+                                    y1="83.5" x2="830" y2="338.5"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#08060B"
+                                        stop-opacity="0.2"></stop>
+                                    <stop offset="0.545554" stop-color="#08060B"
+                                        stop-opacity="0.5"></stop>
+                                    <stop offset="1"
+                                        stop-color="#08060B"></stop>
+                                </lineargradient>
+                            </defs>
+                        </svg>
+                        `
 
 
     }
+
+    
 }) 
