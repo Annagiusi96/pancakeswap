@@ -563,12 +563,13 @@ body {
 }
 
 .cardtot-container {
-    width: 2600px;
+   width: fit-content;
     display: flex;
+    position: relative;
     gap: 30px;
     justify-content: center;
     align-items: center;
-
+    right: 250px;
 }
 
 .container-svgtot {

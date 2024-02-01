@@ -4,7 +4,7 @@ const shapingCarosello = document.querySelector('.shaping-infinite-scrolling-con
 const shapingElements = document.querySelectorAll('.shaping-scroll-element')
 
 shapingElements.forEach(e => {
-    
+
     const cloneNode = e.cloneNode(true);
     shapingCarosello.appendChild(cloneNode);
 })
@@ -21,35 +21,35 @@ const caroselloInterval = setInterval(shapingScrollCarosello, 20);
 
 //Footer Language
 const btnLanguage = document.querySelector('#footerLangEN');
-const listLang= document.querySelector('.footerAllLanguage');
+const listLang = document.querySelector('.footerAllLanguage');
 
 
-btnLanguage.addEventListener('mouseover', ()=>{
+btnLanguage.addEventListener('mouseover', () => {
     // listLang.classList.add('footerLczz')
-    listLang.style.opacity= 1 ;
-    listLang.addEventListener('mouseover', ()=>{
-        listLang.style.opacity= 1;
-        listLang.style.display= block;
+    listLang.style.opacity = 1;
+    listLang.addEventListener('mouseover', () => {
+        listLang.style.opacity = 1;
+        listLang.style.display = block;
         // listLang.classList.add('footerLczz')
     })
-    })
-    
-btnLanguage.addEventListener('mouseout', ()=>{
+})
+
+btnLanguage.addEventListener('mouseout', () => {
     // listLang.classList.remove('footerLczz')
-    listLang.addEventListener('mouseout', ()=>{
-        listLang.style.opacity= 0;
-        listLang.style.display=none;
-        
+    listLang.addEventListener('mouseout', () => {
+        listLang.style.opacity = 0;
+        listLang.style.display = none;
+
     },);
-    
-    listLang.style.opacity= 0;
-    
+
+    listLang.style.opacity = 0;
+
 },);
 
 
 
 //Function animation Card
-function animationCardImg(containerCardTrade,imageTrade,dataImageTrade,dataImageMouseOutTrade){
+function animationCardImg(containerCardTrade, imageTrade, dataImageTrade, dataImageMouseOutTrade) {
 
     containerCardTrade.forEach((card, index) => {
         card.addEventListener('mouseover', () => {
@@ -87,7 +87,7 @@ const dataImageTrade = [
 ]
 
 
-animationCardImg(containerCardTrade,imageTrade,dataImageTrade,dataImageMouseOutTrade);
+animationCardImg(containerCardTrade, imageTrade, dataImageTrade, dataImageMouseOutTrade);
 
 //CARD EARN
 const dataImageEarn = [
@@ -107,7 +107,7 @@ const dataImageOutEarn = [
 
 const containerCardEarn = document.querySelectorAll('#single-card-earn');
 const imageEarn = document.querySelectorAll('.change-image-card-earn')
-animationCardImg(containerCardEarn,imageEarn,dataImageEarn,dataImageOutEarn)
+animationCardImg(containerCardEarn, imageEarn, dataImageEarn, dataImageOutEarn)
 
 //CARD GAME
 
@@ -118,7 +118,7 @@ const dataImageMouseOutGameNft = [
     "https://assets.pancakeswap.finance/web/landing/game-pancake-protectors-purple.png",
     "https://assets.pancakeswap.finance/web/landing/game-prediction-purple.png",
     "https://assets.pancakeswap.finance/web/landing/nft-marketplace-purple.png"
-    
+
 ]
 
 const dataImageGameNft = [
@@ -128,7 +128,7 @@ const dataImageGameNft = [
 
 ]
 
-animationCardImg(containerCardGameNft,imageGameNft,dataImageGameNft,dataImageMouseOutGameNft)
+animationCardImg(containerCardGameNft, imageGameNft, dataImageGameNft, dataImageMouseOutGameNft)
 
 
 //SEZIONE BENNI MONETINA
@@ -156,7 +156,7 @@ function handleIntersection(entries, observer) {
             // Avvia l'animazione solo se l'elemento è visibile nella viewport
             intervalID = setInterval(monetina, 100);
             observer.unobserve(img);
-            
+
         }
     });
 }
@@ -170,150 +170,150 @@ observer.observe(img);
 const shaping1 = document.querySelector(`#show-scroll`)
 const shaping2 = document.querySelector(`.shaping-scroll-element2`)
 
-    const canvasMonetina = document.querySelector('.canvasMonetina');
+const canvasMonetina = document.querySelector('.canvasMonetina');
 const showShaping1 = document.querySelector(`.shaping-infinite-scrolling-container1`)
 const showShaping2 = document.querySelector(`.shaping-infinite-scrolling-container2`)
 const eco = document.querySelector(`.eco`)
 const partner = document.querySelector(`.partner`)
-    const ctx = canvasMonetina.getContext('2d')
-    canvasMonetina.width = 800
-    canvasMonetina.height = 800
-    //linea orizontale s 
-    const startX = 300;
-    const startY = 400
-    const endX = 150
-    const endY = 400
+const ctx = canvasMonetina.getContext('2d')
+canvasMonetina.width = 800
+canvasMonetina.height = 800
+//linea orizontale s 
+const startX = 300;
+const startY = 400
+const endX = 150
+const endY = 400
 ctx.strokeStyle = `#a881fc80`;
-    ctx.lineWidth = 2;
-    ctx.zIndex = 1000
-    let currentX = startX
+ctx.lineWidth = 2;
+ctx.zIndex = 1000
+let currentX = startX
 let intervalIDlineSxOrizontal
-    //metodi doszionedellinee sul canvas
-    function sxLineDraw() {
-        currentX -= 2
-        ctx.beginPath();
-        ctx.moveTo(startX, startY);
-        ctx.lineTo(currentX, endY);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentX == (startX - endX)) {
-            clearInterval(intervalIDlineSxOrizontal)
-            showShaping1.style.height = `200px`
-            eco.style.height = `50px`
-        }
+//metodi doszionedellinee sul canvas
+function sxLineDraw() {
+    currentX -= 2
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(currentX, endY);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentX == (startX - endX)) {
+        clearInterval(intervalIDlineSxOrizontal)
+        showShaping1.style.height = `200px`
+        eco.style.height = `50px`
     }
-    
-    //linea orizontale destra
-    const startMenoX = 500;
-    const startMenoY = 300
-    const endMenoX = 650
-    const endMenoY = 300
+}
 
-    let currentDXX = startMenoX
-    let intervalIDlineDxOrizontal
-    //metodi di costruzione delle linee sul canvas
-    function dxLineDraw() {
-        currentDXX += 2
-        ctx.beginPath();
-        ctx.moveTo(startMenoX, startMenoY);
-        ctx.lineTo(currentDXX, endMenoY);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentDXX === 650) {
-            clearInterval(intervalIDlineDxOrizontal)
-            
-        }
+//linea orizontale destra
+const startMenoX = 500;
+const startMenoY = 300
+const endMenoX = 650
+const endMenoY = 300
+
+let currentDXX = startMenoX
+let intervalIDlineDxOrizontal
+//metodi di costruzione delle linee sul canvas
+function dxLineDraw() {
+    currentDXX += 2
+    ctx.beginPath();
+    ctx.moveTo(startMenoX, startMenoY);
+    ctx.lineTo(currentDXX, endMenoY);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentDXX === 650) {
+        clearInterval(intervalIDlineDxOrizontal)
+
     }
-    //parte la seconda linea dopo che ha finito la prima
-    //linea verticale  destra
-    const startSottoSxX = 150
-    const startSottoSxY = 500
-    const endSottoSxX = 150
-    const endSottoSxY = 700
+}
+//parte la seconda linea dopo che ha finito la prima
+//linea verticale  destra
+const startSottoSxX = 150
+const startSottoSxY = 500
+const endSottoSxX = 150
+const endSottoSxY = 700
 
-    let idIntervallSuLeft
-    let idIntervallGiuLeft
-    let currentLeftIdgiu = startSottoSxY
-    let currentLeftIdSU = startSottoSxY
-    //metodi di costruzione delle linee sul canvas
-    function verticalLineDrawLeft() {
-        currentLeftIdSU -= 5
-        ctx.beginPath();
-        ctx.moveTo(startSottoSxX, startSottoSxY);
-        ctx.lineTo(endSottoSxX, currentLeftIdSU);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentLeftIdSU === startSottoSxX) {
-            clearInterval(idIntervallSuLeft)
-            
-        }
+let idIntervallSuLeft
+let idIntervallGiuLeft
+let currentLeftIdgiu = startSottoSxY
+let currentLeftIdSU = startSottoSxY
+//metodi di costruzione delle linee sul canvas
+function verticalLineDrawLeft() {
+    currentLeftIdSU -= 5
+    ctx.beginPath();
+    ctx.moveTo(startSottoSxX, startSottoSxY);
+    ctx.lineTo(endSottoSxX, currentLeftIdSU);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentLeftIdSU === startSottoSxX) {
+        clearInterval(idIntervallSuLeft)
+
     }
-    function verticalLineDrawLeftSu() {
-        currentLeftIdgiu += 2
-        console.log(currentLeftIdgiu);
-        ctx.beginPath();
-        ctx.moveTo(startSottoSxX, startSottoSxY);
-        ctx.lineTo(endSottoSxX, currentLeftIdgiu);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentLeftIdgiu === 700) {
-            clearInterval(idIntervallGiuLeft)
-            showShaping2.style.height = `200px`
-            partner.style.height = `50px`
-            //mettere partner
-        }
+}
+function verticalLineDrawLeftSu() {
+    currentLeftIdgiu += 2
+    console.log(currentLeftIdgiu);
+    ctx.beginPath();
+    ctx.moveTo(startSottoSxX, startSottoSxY);
+    ctx.lineTo(endSottoSxX, currentLeftIdgiu);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentLeftIdgiu === 700) {
+        clearInterval(idIntervallGiuLeft)
+        showShaping2.style.height = `200px`
+        partner.style.height = `50px`
+        //mettere partner
     }
-   
+}
 
 
 
-    //linea verticale  sinistra
-    const startSottoDxX = 650
-    const startSottoDxY = 300
-    const endSottoDxX = 650
-    const endSottoDxY = 700
 
-        let currentIdVerticalRightUp = startSottoDxY
-    //metodi di costruzione delle linee sul canvas
-    function verticalLineDrawrightSu() {
-        currentIdVerticalRightUp += 5
-        ctx.beginPath();
-        ctx.moveTo(startSottoDxX, startSottoDxY);
-        ctx.lineTo(endSottoDxX, currentIdVerticalRightUp);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentIdVerticalRightUp == 700) {
-            clearInterval(intervalIDUpRight)
-            
-        }
+//linea verticale  sinistra
+const startSottoDxX = 650
+const startSottoDxY = 300
+const endSottoDxX = 650
+const endSottoDxY = 700
+
+let currentIdVerticalRightUp = startSottoDxY
+//metodi di costruzione delle linee sul canvas
+function verticalLineDrawrightSu() {
+    currentIdVerticalRightUp += 5
+    ctx.beginPath();
+    ctx.moveTo(startSottoDxX, startSottoDxY);
+    ctx.lineTo(endSottoDxX, currentIdVerticalRightUp);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentIdVerticalRightUp == 700) {
+        clearInterval(intervalIDUpRight)
+
     }
+}
 
 
 let intervalIDUpRight
-    let currentIdVerticalRightDown = startSottoDxY
-    let intervalIDDownRight
-    //metodi di costruzione delle linee sul canvas
-    function verticalLineDrawrightGiu() {
-        currentIdVerticalRightDown -= 2
-        ctx.beginPath();
-        ctx.moveTo(startSottoDxX, startSottoDxY);
-        ctx.lineTo(endSottoDxX, currentIdVerticalRightDown);
-        ctx.stroke();
-        ctx.closePath();
-        if (currentIdVerticalRightDown == 150) {
-            clearInterval(intervalIDDownRight)
-            
+let currentIdVerticalRightDown = startSottoDxY
+let intervalIDDownRight
+//metodi di costruzione delle linee sul canvas
+function verticalLineDrawrightGiu() {
+    currentIdVerticalRightDown -= 2
+    ctx.beginPath();
+    ctx.moveTo(startSottoDxX, startSottoDxY);
+    ctx.lineTo(endSottoDxX, currentIdVerticalRightDown);
+    ctx.stroke();
+    ctx.closePath();
+    if (currentIdVerticalRightDown == 150) {
+        clearInterval(intervalIDDownRight)
 
-        }
+
     }
+}
 
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     // Opzioni per l'Intersection Observer
     const options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.9 
+        threshold: 0.9
     };
 
     // Funzione di callback per l'Intersection Observer
@@ -321,9 +321,9 @@ let intervalIDUpRight
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // L'elemento è entrato nella viewport, avvia le animazioni
-               setTimeout(() => {
-                   intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
-               }, 1300);
+                setTimeout(() => {
+                    intervalIDlineSxOrizontal = setInterval(() => { sxLineDraw() }, 10)
+                }, 1300);
                 setTimeout(() => {
                     intervalIDlineDxOrizontal = setInterval(() => dxLineDraw(), 10)
                 }, 2500);
@@ -335,7 +335,7 @@ let intervalIDUpRight
                     idIntervallSuLeft = setInterval(() => verticalLineDrawLeft(), 10)
                     idIntervallGiuLeft = setInterval(() => verticalLineDrawLeftSu(), 10)
                 }, 2100);
-                
+
 
                 // Puoi anche smettere di osservare l'elemento dopo che è stato visualizzato una volta
                 observer.unobserve(entry.target);
@@ -357,13 +357,11 @@ const shapingCarosello2 = document.querySelector('.shaping-infinite-scrolling-co
 const shapingElements2 = document.querySelectorAll('.shaping-scroll-element2')
 
 shapingElements2.forEach(e => {
-    console.log(e)
     const cloneNode = e.cloneNode(true);
     shapingCarosello2.appendChild(cloneNode);
 })
 
 function shapingScrollCaroselloTop2() {
-    console.log("Resetting scrollTop to 0");
     if (shapingCarosello2.scrollTop >= shapingCarosello2.scrollHeight / 2) {
         shapingCarosello2.scrollTop = 0;
     } else {
@@ -371,8 +369,7 @@ function shapingScrollCaroselloTop2() {
     }
 }
 function shapingScrollCaroselloLeft2() {
-    console.log("Resetting scrollTop to 0");
-    if (shapingCarosello2.scrollLeft >= shapingCarosello2.scrollWidth/ 2) {
+    if (shapingCarosello2.scrollLeft >= shapingCarosello2.scrollWidth / 2) {
         shapingCarosello2.scrollLeft = 0;
     } else {
         shapingCarosello2.scrollLeft += 1;
@@ -404,13 +401,13 @@ function handleMediaQuery(media) {
     if (media.matches) {
         setInterval(shapingScrollCaroselloLeft1, 20);
         setInterval(shapingScrollCaroselloLeft2, 20);
-        
+
         console.log(`Media query attiva`);
     } else {
         console.log(`Media query non attiva`);
         setInterval(shapingScrollCaroselloTop1, 20);
         setInterval(shapingScrollCaroselloTop2, 30)
-        
+
     }
 }
 
@@ -420,31 +417,31 @@ handleMediaQuery(mediaQuery);
 // Aggiungi l'ascoltatore per gestire eventuali cambiamenti nella media query
 mediaQuery.addEventListener('change', handleMediaQuery);
 const milion = document.querySelector(`.milion`)
-let a=0
+let a = 0
 function dinamicNumbers() {
-    if (a<730) {
-        milion.innerText =`$ ${a}  Milion`
+    if (a < 730) {
+        milion.innerText = `$ ${a}  Milion`
         a++
     }
 }
-setInterval(dinamicNumbers, 2); 
+setInterval(dinamicNumbers, 2);
 const supply = document.querySelector(`.supply`)
-let b=0
+let b = 0
 function dinamicNumbersa() {
-    if (b<= 2000) {
-        supply.innerText =` ${b} `
-        b+=500
-    }else{
+    if (b <= 2000) {
+        supply.innerText = ` ${b} `
+        b += 500
+    } else {
         clearInterval(clearSupplyset)
         supply.innerText = ` 283,221,454`
     }
 }
-const clearSupplyset=setInterval(dinamicNumbersa, 10); 
+const clearSupplyset = setInterval(dinamicNumbersa, 10);
 const totalSupply = document.querySelector(`.total-supply`)
-let c=0
+let c = 0
 function dinamicNumbersc() {
-    if (c< 500) {
-        totalSupply.innerText =` ${c} `
+    if (c < 500) {
+        totalSupply.innerText = ` ${c} `
         c++
     }
     else {
@@ -452,12 +449,12 @@ function dinamicNumbersc() {
         totalSupply.innerText = ` 394,615,093`
     }
 }
-const cleartotalset= setInterval(dinamicNumbersc, .1); 
+const cleartotalset = setInterval(dinamicNumbersc, .1);
 const burn = document.querySelector(`.burn`)
-let d=0
+let d = 0
 function dinamicNumbersd() {
     if (d < 1144286783) {
-        burn.innerText =` ${d} `
+        burn.innerText = ` ${d} `
         d += 120287361
     }
     else {
@@ -465,7 +462,7 @@ function dinamicNumbersd() {
         burn.innerText = `1,144,286,783`
     }
 }
-const clearBuernSet = setInterval(dinamicNumbersd, 100); 
+const clearBuernSet = setInterval(dinamicNumbersd, 100);
 //GAME & NFT RAPISARDI
 
 const containerCarosellJoin = document.querySelector(".container-carosello-join");
@@ -490,7 +487,7 @@ function handleClick(event) {
         buttonSwiper1.classList.add("button-swiper-active");
         buttonSwiper1.classList.remove("button-swiper-disabled");
     }
-} 
+}
 let boolSlide = true;
 function innerCardJoin() {
     joinCard1.innerHTML = `
@@ -503,7 +500,7 @@ function innerCardJoin() {
             <span><button id="button-1-swiper" id="btn-prev-swiper" class="button-swiper-active"></button></span>
             <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
         </div>`;
-    console.log("object");
+
 }
 
 function innerCardJoin1() {
@@ -530,21 +527,21 @@ function innerCardJoin1() {
             <span><button id="button-1-swiper" class="button-swiper-active"></button></span>
             <span><button id="button-2-swiper" class="button-swiper-disabled"></button></span>
         </div>`;
-    
+
 }
 
 //carosello cardfeatured chiara
 
 
-setInterval(()=>{
-    if(boolSlide){
+setInterval(() => {
+    if (boolSlide) {
         innerCardJoin();
         boolSlide = false;
-    }else{
+    } else {
         innerCardJoin1();
         boolSlide = true
     }
-},3000)
+}, 3000)
 
 
 containerCarosellJoin.addEventListener("click", handleClick);
@@ -554,7 +551,7 @@ const scrollBtn = document.querySelector(`.scroll-btn`)
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+
 
     const scrollBtn = document.querySelector('.scroll-btn');
 
