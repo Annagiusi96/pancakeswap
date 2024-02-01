@@ -294,6 +294,22 @@ li.trade-link>a {
     border-radius: 7px;
 }
 
+.footerAllLanguage::-webkit-scrollbar{
+    width: 7px;
+
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(53, 52, 52);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8add2;
+    border-radius: 7px;
+}
+
+
 .button button:hover .button-lang-list {
     visibility: visible !important;
 
